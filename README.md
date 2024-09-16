@@ -31,5 +31,7 @@ Nothing seems to bring family together quite like Grammy's apple pie, Dad's gril
 ### Technologies
 
 I will use the following technologies in the ways listed below:
-* 
+* **HTML** : Use correct HTML structure for application.
+* **CSS**  : Use for application styling on different screen sizes, format input in an appealing way.
+* **React** : 
 
