@@ -17,7 +17,10 @@ Nothing seems to bring family together quite like Grammy's apple pie, Dad's gril
 
 ### Design
 
-***REMEMBER TO PUT THE DESIGN IMAGES IN HERE***
+![mock layout 1](./pictures/app1.jpg)
+
+
+![mock layout 2](./pictures/app2.jpg)
 
 ### Key Features
 
@@ -33,5 +36,8 @@ Nothing seems to bring family together quite like Grammy's apple pie, Dad's gril
 I will use the following technologies in the ways listed below:
 * **HTML** : Use correct HTML structure for application.
 * **CSS**  : Use for application styling on different screen sizes, format input in an appealing way.
-* **React** : 
+* **React** : Provides login and choice display.
+* **Service** : Backend service with endpoints for login and retrieving choices and input.
+* **DB/Login** : Stores users, choices, and formatted input. Register and login users. Credentials securely stored in database.
+* **Websocket** : Allows users to see the recipebooks of other users.
 
