@@ -1,6 +1,6 @@
 # CS260 Notes
 
-[**Markdown Guide**](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+[**_Markdown Guide Link_**](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
 
 ## GitHub, Commits, Push, and Pull
@@ -48,6 +48,22 @@ git pull
 
 
 For now, I don't think merge conflicts are overly relevant.
+
+
+## AWS and Setting Up a Domain
+I think that AWS kind of sucks to set up. But it's done now. Here's what I learned.
+
+### Getting a Server
+Once you have an account with AWS, go to EC2 and set up the server. The instructions seem fairly straightforward. It is ok to pick any license for a starter project. Make sure to make it broadly accessible if you want it that way.
+
+### Getting a Domain
+Go to Route53. Check to see if your desired domain name is available.
+
+*Pro tip: Look for .click domains. They are $3 a year rn*
+
+Register the domain name, then go to the Hosted zones tab. Create record using the IP address from the server, then create another record using an asterisk in the Record name field. This will allow you to use subdomains and the main domain with the server.
+
+
 
 
 
