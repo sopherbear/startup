@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" / >
+    <title>Family Recipe Book Home</title>
+    <link rel ="icon" href = "favicon.ico" /> 
+   </head>
+
+   <header>
+    <h1>Welcome to Family Recipe Book!</h1>
+    <h2>Login Here</h2>
+    <!--I think this is indicating that I can't go to these other pages until I log in. Check w/ TAs-->
+    <!-- ALSO MAKE SURE TO CHECK THE DOUBLE ACTION-->
+    <form method="get" action="create_book.html" action="my_book.html">
+        <div>
+            <span>@</span>
+            <input type="text" placeholder="@youremail.com" />
+        </div>
+        <div>
+            <span>#</span>
+            <input type="password" placeholder="password" />
+        </div>
+        <button type="submit">Log in</button>
+        <button type="submit">Create Account</button>
+    </form>
+    </header>
+
+    <body>
+        <nav>
+            <menu>
+                <ul>
+                    <li style="display:inline-block; margin-right: 20px">
+                        <!--I want to use external images of cupcakes or something for these files. Ask about how to do that.-->
+                        <!--REMEMBER TO TURN THESE LINKS INTO IMAGES AND TO LABEL THEM-->
+                        <a href="my_book.html">My Recipebook</a>
+                    </li>
+                    <li style="display:inline-block; margin-right: 20px;">
+                        <a href="other_book.html">Other Recipebooks</a>
+                    </li>
+                    <li style="display:inline-block;">
+                        <a href="create_book.html">Create Recipebook</a>
+                    </li>
+                </ul>
+            </menu>
+        </nav>
+
+        <footer>
+            <hr />
+            <span class="text-reset">Sophie Larsen</span>
+            <br />
+            <a href="https://github.com/sopherbear/startup.git">Github</a>
+        </footer>
+    </body>
+</html>
