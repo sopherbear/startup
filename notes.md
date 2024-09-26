@@ -64,6 +64,10 @@ Go to Route53. Check to see if your desired domain name is available.
 Register the domain name, then go to the Hosted zones tab. Create record using the IP address from the server, then create another record using an asterisk in the Record name field. This will allow you to use subdomains and the main domain with the server.
 
 
+## HTML
+HTML is a markdown language that provides all structure and none of the looks. Think of it as a skeleton.
+
+[HTML Notes](./HTML_notes.md)
 
 
 
