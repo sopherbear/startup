@@ -41,3 +41,14 @@ I will use the following technologies in the ways listed below:
 * **DB/Login** : Stores users, choices, and formatted input. Register and login users. Credentials securely stored in database.
 * **Websocket** : Allows users to see the recipebooks of other users.
 
+
+### HTML Deliverable
+
+For this deliverable, I structured my startup application using HTML.
+
+- [x] **HTML** : 7 HTML pages that include the following pages: home with login, creating a recipebook, a menu of one's own recipe book, a form to add a new recipe, a list of others' recipe books, a menu of another's recipe book, and the structure that all recipes will use.
+- [x] **Links** : Each page has an option to navigate to one or multiple other pages, either through hyperlinks or linked images. In addition, the recipe menu has links to placeholders for actual recipes.
+- [x] **Text** : There are text headers and text descriptions on the forms. The recipe itself will be completely text, although right now I have just put in placeholders for the actual text.
+- [x] **Images** : I put in placeholders for the images. I plan to use a third-party service to supply pictures of food as the cover of each recipebook. I also put in a placeholder for an image in the tab.
+- [x] **DB/Login** : There is an input box and submit button for login, creating new recipe books, and creating new recipes. The recipes themselves will be formatted directly from the input data.
+- [x] **Websocket** : Each recipebook is accessible by any user, although users can only add to recipebooks that they have made. Recipebooks will be updated live. 
