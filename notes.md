@@ -70,4 +70,8 @@ HTML is a markdown language that provides all structure and none of the looks. T
 [HTML Notes](./HTML_notes.md)
 
 
+## CSS
+CSS (Cascading style sheets) is used to format HTML so that it looks nice. Think of it as adding some flesh and skin onto that skeleton.
+
+[CSS Notes](./CSS_notes.md)
 
