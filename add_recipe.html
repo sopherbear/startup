@@ -10,6 +10,7 @@
         <header>
             <h2>Family Recipe Book</h2>
             <nav>
+                <!--Menu means it is interactive-->
                 <menu>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="my_book.html">My Recipe Book</a></li>
@@ -17,6 +18,46 @@
                 </menu>
             </nav>
         </header>
+        <main>
+            <!--Not totally sure where this form will need to go, so I'm putting in this placeholder for now.-->
+            <form action="placeholder.html" method="post">
+                <ul>
+                    <li>
+                        <label for="text">What do you want to call this recipe?</label>
+                        <input type="text" id="recipe_name" name="var_recipe_name" placeholder="Name your recipe!" required/>
+                    </li>
+                    <li>
+                        <label for="textarea">Enter a description of the recipe: </label>
+                        <textarea type="textarea" id="describe" name="var_describe" placeholder="E.g.: Granny's apple pie is ..."></textarea>
+                    </li>
+                    <li>
+                        <label for="textarea">Enter in ingredients and their precise measurements separated by commas: </label>
+                        <textarea type="textarea" id="ingredients" name="var_ingredients" placeholder="E.g.: 3/4 cups sugar, 1/2 tsp salt ..." required></textarea>
+                    </li>
+                    <li>
+                        <label for="textarea">Enter in each step with a number and instruction: </label>
+                        <textarea type="textarea" id="instructions" name="var_instructions" placeholder="E.g.: 1. Set oven to 350F. 2. Get..." required></textarea>
+                    </li>
+                    <li>
+                        <label for="select">Categorize recipe: </label>
+                        <select id="categories" name="var_categories">
+                            <option>Mains</option>
+                            <option>Soups</option>
+                            <option>Breads</option>
+                            <option>Sides</option>
+                            <option>Desserts</option>
+                        </select>
+                    </li>
+                </ul>
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+        <footer>
+            <hr />
+            <span class="text-reset">Sophie Larsen</span>
+            <br />
+            <a href="https://github.com/sopherbear/startup.git">Github</a>
+        </footer>
     </body>
     
 </html>
