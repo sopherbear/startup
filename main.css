@@ -1,4 +1,9 @@
 
+html {
+  height: 100%;
+}
+
+
 * {
   font-family: sans-serif;
   color: whitesmoke;
@@ -8,13 +13,14 @@
 body {
   display: flex;
   flex-direction: column;
-  min-width: 375px;
+  height: 100%;
   background-color: cadetblue !important;
   
 }
 
 header {
-  flex: 0 80px;
+  flex: 0 60px;
+  background-color: darkslategray !important;
 }
 
 main {
@@ -27,6 +33,7 @@ main {
 
 footer {
   flex: 0 30px;
+  background-color: darkslategray;
 }
 
 menu {
@@ -39,6 +46,20 @@ menu {
 
 button {
   color:black;
+}
+
+.navbar-brand {
+  padding: .3em;
+  border-style: dotted;
+  margin-left: .3em
+}
+
+.nav-item {
+  padding: 0 .5em;
+}
+
+footer a {
+  float: right
 }
 
 @media (max-height: 600px) {

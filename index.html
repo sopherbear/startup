@@ -19,33 +19,23 @@
    </head>
     <body class="">
         <header class="container-fluid">
-            <nav>
-                <menu>
-                    <ul>
-                        <li style="display:inline-block; margin-right: 20px">
-                            <!--I want to use 3rd party services to get images of cupcakes or something for the following files-->
-                
-                            <a href="my_book.html" >
-                                <img src="placeholder.jpg" alt="My Recipe Book" />
-                                <!--PLACEHOLDER CAPTIONS-->
-                                <figcaption>My Recipe Book</figcaption>
-                            </a>
-                        </li>
-                        <li style="display:inline-block; margin-right: 20px;">
-                            <a href="list_other_books.html">
-                                <img src="placeholder.jpg" alt="Other Recipebooks" />
-                                <figcaption>Other Recipe Books</figcaption>
-                            </a>
-                        </li>
-                        <li style="display:inline-block;">
-                            <a href="create_book.html">
-                                <img src="placeholder.jpg" alt="Create Recipebook" />
-                                <figcaption>Create New Recipe Book</figcaption>
-                            </a>
-                        
-                        </li>
-                    </ul>
-                </menu>
+            <nav class="navbar fixed-top navbar-dark">
+              <a class="navbar-brand">Family Recipe Book</a>
+              <menu class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <!--Nav-link active means that this particular link is the page you are on. It will highlight this one.-->              
+                    <a class="nav-link" href="my_book.html" >My Book</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="list_other_books.html"> Other Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link href="create_book.html">Create Book</a>
+                </li>
+              </menu>
             </nav>
         </header>
 
@@ -73,10 +63,11 @@
         </main>
 
         <footer>
-            <hr />
-            <span class="text-reset">Sophie Larsen</span>
-            <br />
-            <a href="https://github.com/sopherbear/startup.git">Github</a>
+            <!--Container-fluid makes it so the text isn't right up against the edges of the screen. Pretty neat.-->
+            <div class="container-fluid">
+                <span class="text-reset">Sophie Larsen</span>
+                <a class="text-reset" href="https://github.com/sopherbear/startup.git">Github</a>
+            </div>
         </footer>
     </body>
 </html>

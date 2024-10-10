@@ -36,6 +36,26 @@ Best Practice: Put rules for the highest levels in the DOM higher in the documen
 
 ![alt text](image.png)
 
+### Accessing CSS files from html files
+
+In order to access a CSS file, you need to put a reference to the file in the HEAD section.
+
+Example:
+```
+<!--Make sure everything is linked to CSS!-->
+    <link rel="stylesheet" href="main.css"/>
+
+    <!--Link to bootstrap CSS framework-->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+        crossorigin="anonymous"
+        />
+```
+The main.css file contains general, overarching rules that more or less apply to every file. However, other css files can also be linked with instructions for specifics that only apply to some of the html files.
+
+
 ## Accessing particular areas within DOM
 
 
