@@ -1,3 +1,10 @@
+
+* {
+  font-family: sans-serif;
+  color: whitesmoke;
+
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -30,7 +37,18 @@ menu {
   list-style: none;
 }
 
-.navbar-brand {
-  padding-left: 0.3em;
-  border-bottom: solid rgb(182, 182, 182) thin;
+button {
+  color:black;
+}
+
+@media (max-height: 600px) {
+  header {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+  main {
+    flex: 1 100vh;
+  }
 }
