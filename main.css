@@ -75,3 +75,9 @@ footer a {
   }
 }
 
+@media (max-width: 500px) {
+  header {
+    font-size: 12px;
+  }
+
+}
