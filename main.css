@@ -51,11 +51,12 @@ button {
 .navbar-brand {
   padding: .3em;
   border-style: dotted;
-  margin-left: .3em
+  margin-left: .3em;
+  margin-right: 0em;
 }
 
 .nav-item {
-  padding: 0 .5em;
+  padding: 0 .3em;
 }
 
 footer a {
@@ -73,3 +74,4 @@ footer a {
     flex: 1 100vh;
   }
 }
+
