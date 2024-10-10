@@ -18,15 +18,24 @@
     </head>
     <body>
         <header>
-            <h2>Family Recipe Book</h2>
-            <nav>
-                <!--Menu means it is interactive-->
-                <menu>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="my_book.html">My Recipe Book</a></li>
-                    <li><a href="list_other_books.html">Other Recipe Books</a></li>
+            <nav class="navbar fixed-top navbar-dark">
+                <a class="navbar-brand">Family Recipe Book</a>
+                <menu class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link active" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <!--Nav-link active means that this particular link is the page you are on. It will highlight this one.-->              
+                      <a class="nav-link" href="my_book.html" >My Book</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="list_other_books.html"> Other Books</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="create_book.html">Create Book</a>
+                  </li>
                 </menu>
-            </nav>
+              </nav>
         </header>
         <main>
             <!--Not totally sure where this form will need to go, so I'm putting in this placeholder for now.-->
