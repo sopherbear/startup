@@ -39,27 +39,26 @@
             </nav>
         </header>
 
-        <main>
-            <!--Placeholder for actual username-->
-            <h1>Welcome to Family Recipe Book, USERNAME!</h1>
-            <!--I think this is indicating that I can't go to these other pages until I log in. Check w/ TAs-->
-            <!-- ALSO MAKE SURE TO CHECK THE DOUBLE ACTION-->
-            <form method="get" action="create_book.html" action="my_book.html">
-                <div>
-                    <span>Username: </span>
-                    <input type="text" placeholder="Your username here" />
-                </div>
-                <div>
-                    <span>@</span>
-                    <input type="text" placeholder="@youremail.com" />
-                </div>
-                <div>
-                    <span>#</span>
-                    <input type="password" placeholder="password" />
-                </div>
-                <button type="submit">Log in</button>
-                <button type="submit">Create Account</button>
-            </form>
+        <main class="container-fluid text-center">
+            <div>
+                <h2>Welcome to Family Recipe Book!</h2>
+                <form method="get" action="#" action="#">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Username: </span>
+                        <input class="form-control" type="text" placeholder="Your username here" />
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Email:</span>
+                        <input class="form-control" type="text" placeholder="@youremail.com" />
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Password:</span>
+                        <input class="form-control" type="password" placeholder="password" />
+                    </div>
+                    <button type="submit" class="button1">Log in</button>
+                    <button type="submit" class="button2">Create Account</button>
+                </form>
+            </div>
         </main>
 
         <footer>

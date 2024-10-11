@@ -44,10 +44,6 @@ menu {
   list-style: none;
 }
 
-button {
-  color:black;
-}
-
 .navbar-brand {
   padding: .3em;
   border-style: dotted;
@@ -57,6 +53,18 @@ button {
 
 .nav-item {
   padding: 0 .3em;
+}
+
+.button1 {
+  background-color: darkslategray;
+  color: whitesmoke;
+  border-radius: 8px;
+}
+
+.button2 {
+  background-color: lightgray;
+  color: black;
+  border-radius: 8px;
 }
 
 footer a {
