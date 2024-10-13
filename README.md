@@ -52,3 +52,15 @@ For this deliverable, I structured my startup application using HTML.
 - [x] **Images** : I put in placeholders for the images. I plan to use a third-party service to supply pictures of food as the cover of each recipebook. I also put in a placeholder for an image in the tab.
 - [x] **DB/Login** : There is an input box and submit button for login, creating new recipe books, and creating new recipes. The recipes themselves will be formatted directly from the input data.
 - [x] **Websocket** : Each recipebook is accessible by any user, although users can only add to recipebooks that they have made. Recipebooks will be updated live. 
+
+
+
+### CSS Deliverable
+
+For this deliverable, I formatted the appearance of my application.
+
+- [x] **Header, Footer, and Main Body Content**: I have all of these.
+- [x] **Navigation Elements**: I added a navigation menu in the header for all of the pages. I also have several buttons that have links.
+- [x] **Responsive to Window Resizing**: Flex has been applied, so the app should adjust well.
+- [x] **Application Elements**: Played with color scheme, should have good contrast.
+- [x] **Application Images**: Application has images that have been sized appropriately.
