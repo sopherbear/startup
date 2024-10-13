@@ -16,6 +16,7 @@
             integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
             crossorigin="anonymous"
         />
+        <link href="https://getbootstrap.com/docs/5.1/assets/css/docs.css" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -39,51 +40,128 @@
               </nav> 
         </header>
         <main>
-            <div class="my_book_info">
-                <!--Need to put placeholder for whatever they name their recipebook-->
-                <h2>My Recipe Book</h2>
-                <!--NEED TO ADD A TEXT LABEL FOR THE PICTURE and make sure the picture is the same as on the other pages.-->
-                <img src="pictures/pexels-ash-craig-122861-376464.jpg" alt="My Recipe Book"/>
-                <figcaption>PLACEHOLDER FOR BOOK NAME</figcaption>
-            </div>
-            <div class="book_contents">
-                <ul>
-                    <li>
-                        <label for="mains">Mains: </label>
-                        <!--NEED TO DOUBLE CHECK ON HOW ADDING NEW RECIPES WILL WORK. TA question I guess-->
-                            <ul>
-                                <a href="recipe.html">Recipe</a>
-                            </ul>
-                    </li>
-                    <li>
-                        <label for="soups">Soups: </label>
-                            <!--NOT EXACTLY SURE IF THIS WILL WORK, BUT THE STRUCTURE IS WHAT I WANT. NEED TO CHECK WITH TAs-->
-                            <ul>
-                                <a href="recipe.html">Recipe</a>
-                            </ul>
-                    </li>
-                    <li>
-                        <label for="breads">Breads: </label>
-                            <ul>
-                                <a href="recipe.html">Recipe</a>
-                            </ul>
-                    </li>
-                    <li>
-                        <label for="sides">Sides: </label>
-                            <ul>
-                                <a href="recipe.html">Recipe</a>
-                            </ul>
-                    </li>
-                    <li>
-                        <label for="desserts">Desserts: </label>
-                            <ul>
-                                <a href="recipe.html">Recipe</a>
-                            </ul>
-                    </li>
-                    <span>+</span>
-                    <a href="add_recipe.html">Add New Recipe</a>
-                </ul>
-            </div>
+            <section>
+                <div>
+                    <!--Need to put placeholder for whatever they name their recipebook-->
+                    <h2>My Recipe Book</h2>
+                    <!--NEED TO ADD A TEXT LABEL FOR THE PICTURE and make sure the picture is the same as on the other pages.-->
+                    <img src="pictures/pexels-ash-craig-122861-376464.jpg" alt="My Recipe Book"/>
+                    <figcaption>PLACEHOLDER FOR BOOK NAME</figcaption>
+                </div>
+            </section>
+            <section>
+                <div class="bd-example">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Mains:
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <select>
+                                        <option>
+                                            <a href="recipe.html">Recipe1</a>
+                                        </option>
+                                        <option>
+                                            <a href="recipe.html">Recipe2</a>
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Soups:
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <select>
+                                        <option>
+                                            <a href="recipe.html">Recipe1</a>
+                                        </option>
+                                        <option>
+                                            <a href="recipe.html">Recipe2</a>
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Breads:
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <select>
+                                        <option>
+                                            <a href="recipe.html">Recipe1</a>
+                                        </option>
+                                        <option>
+                                            <a href="recipe.html">Recipe2</a>
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Sides:
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <select>
+                                        <option>
+                                            <a href="recipe.html">Recipe1</a>
+                                        </option>
+                                        <option>
+                                            <a href="recipe.html">Recipe2</a>
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Desserts:
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <select>
+                                        <option>
+                                            <a href="recipe.html">Recipe1</a>
+                                        </option>
+                                        <option>
+                                            <a href="recipe.html">Recipe2</a>
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    + Add New Recipe
+                                </button>
+                            </h2>
+                            <div id="Six" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <select>
+                                       <a href="add_recipe.html">Click Here to Add a Recipe!</a>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+            </section>
         </main>
         <footer>
             <div class="container-fluid">
