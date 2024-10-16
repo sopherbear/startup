@@ -30,3 +30,60 @@ every: tests if all items match (a.every(i => i < 3))
 some: tests if any items match (a.some(i => i < 3))
 
 .length doesn't require parentheses.
+
+
+### The DOM
+
+You can use javaScript to manipulate the DOM (which is the structure that html uses to construct stuff.)
+
+To see the DOM, type *document* into the browser debugger console window, it will pull up the DOM.
+
+To use it in javaScript, start with the *document* variable and go through the children. Example:
+
+```
+function displayElement(el) {
+  console.log(el.tagName);
+  for (const child of el.children) {
+    displayElement(child);
+  }
+}
+
+displayElement(document);
+```
+
+You can provide a CSS selector to querySelectorAll in order to mess with particular elements.
+
+
+*textContent* contains all element text.
+```
+const listElements = document.querySelectorAll('p');
+for (const el of listElements) {
+  console.log(el.textContent);
+}
+```
+
+To **insert** element:
+Create it in the DOM document first (html). Then:
+```
+function insertChild(parentSelector, text) {
+  const newChild = document.createElement('div');
+  newChild.textContent = text;
+
+  const parentElement = document.querySelector(parentSelector);
+  parentElement.appendChild(newChild);
+}
+
+insertChild('#courses', 'new course');
+```
+
+
+To **remove** element, call this on the parent element:
+```
+function deleteElement(elementSelector) {
+  const el = document.querySelector(elementSelector);
+  el.parentElement.removeChild(el);
+}
+
+deleteElement('#courses div');
+```
+
