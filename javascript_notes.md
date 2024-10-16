@@ -87,3 +87,21 @@ function deleteElement(elementSelector) {
 deleteElement('#courses div');
 ```
 
+To inject blocks of HTML into element (probably get duck's help for full context):
+
+```
+const el = document.querySelector('div');
+el.innerHTML = '<div class="injected"><b>Hello</b>!</div>';
+```
+
+
+**Event Listeners:** Functions that get called when an event occurs with a particular element.
+
+Example:
+```
+const submitDataEl = document.querySelector('#submitData');
+submitDataEl.addEventListener('click', function (event) {
+  console.log(event.type);
+});
+```
+
