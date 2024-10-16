@@ -75,3 +75,9 @@ CSS (Cascading style sheets) is used to format HTML so that it looks nice. Think
 
 [CSS Notes](./CSS_notes.md)
 
+
+## JavaScript
+Javascript is used for all the interactive features on a web application.
+
+[JavaScript Notes](./javascript_notes.txt)
+
