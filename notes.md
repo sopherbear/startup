@@ -81,3 +81,7 @@ Javascript is used for all the interactive features on a web application.
 
 [JavaScript Notes](./javascript_notes.txt)
 
+
+## Study Guide Notes
+[study_guide](./study_guide.txt)
+

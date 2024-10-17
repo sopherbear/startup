@@ -105,3 +105,6 @@ submitDataEl.addEventListener('click', function (event) {
 });
 ```
 
+
+**FUN FACT**: putting "use strict"; on top of js file makes it stricter, so code is cleaner and safer.
+
