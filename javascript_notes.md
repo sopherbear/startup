@@ -1,6 +1,140 @@
 # JavaScript Notes
 Javascript is used for interactive things. Like making an accordion open and close, for instance.
 
+
+## The Basics:
+Example of printing something to the console:
+
+```
+console.log('Hello' + ' ' + 'world');
+// OUTPUT: Hello world
+```
+
+Example function:
+
+```
+function join(a, b) {
+  return a + ' ' + b;
+}
+
+console.log(join('Hello', 'world'));
+// OUTPUT: Hello world
+```
+
+
+TO SEE HOW LONG CODE TAKES:
+
+```
+console.time('demo time');
+// 'demo time': some code that takes a long time.
+console.timeEnd('demo time');
+// OUTPUT: demo time: 9762.74 ms
+```
+
+To count how many times code is run:
+```
+console.count('a');
+// OUTPUT: a: 1
+console.count('a');
+// OUTPUT: a: 2
+console.count('b');
+// OUTPUT: b: 1
+```
+
+Celebrations!! You can use if, else if, and else! Woohoo!!
+```
+if (a === 1) {
+  //...
+} else if (b === 2) {
+  //...
+} else {
+  //...
+}
+```
+
+Also:
+```
+if (true && (!false || true)) {
+  //...
+}
+```
+
+Also for and while loops.
+
+Also "break" and "continue".
+
+
+### Declaring Variables
+In order to declare a variable, use **let** or **const**. (**let** for changeable vars, **const** for constants.)
+
+```
+let x = 1;
+
+const y = 2;
+```
+
+### Arrow Function
+Basically lets us pass in an anonymous function without much fuss. 
+This one always returns 3:
+```
+() => 3;
+```
+
+closure: a function that lets it refer to parent, even after that function is closed. Basically, lets us update without the need for a global var.
+
+```
+function makeClosure(a) {
+  a = 'a2';
+  const b = 'b2';
+  return () => [a, b];
+}
+
+const a = 'a';
+const b = 'b';
+
+const closure = makeClosure(a);
+
+console.log(closure());
+// OUTPUT: ['a2', 'b2']
+
+console.log(a, b);
+// OUTPUT: 'a' 'b'
+```
+
+
+### JavaScript Types
+Primitive Types (sorry guys, their words, not mine): Null, undefined, boolean, number, BigInt, string, symbol
+
+Object Types: Object, Function, Date, Array, Map, JSON(a data-interchange format: similar to map, but not)
+
+### Common Operators
++, -, *, /, === (the triple is NECESSARY), !==(inequality, double == is necessary)
+
+
+### Working with Strings
+
+length, indexOf(), split(), startsWith(), endsWith() (make sure to put the thing you are dividing by if it isn't whitespace), toLowerCase()
+
+
+## Adding JavaScript to HTML
+
+Can do it:
+1. Directly with a "script" element. Example:
+```
+<button onclick="sayGoodbye()">Say Goodbye</button>
+  <script>
+    function sayGoodbye() {
+      alert('Goodbye');
+    }
+  </script>
+```
+2. Or using an src attribute to reference to the whole js file. For example:
+```
+<head>
+  <script src="javascript.js"></script>
+</head>
+```
+
 ## JavaScript Arrays
 
 Basic Array:
@@ -31,6 +165,26 @@ some: tests if any items match (a.some(i => i < 3))
 
 .length doesn't require parentheses.
 
+
+### JSON
+Looks a lot like a map. can contain following data types: string, number, boolean, array, object, or null. Usually contains objects.
+
+THe Key is always a string, and the value is an associated data type.
+Example:
+```
+{
+  "class": {
+    "title": "web programming",
+    "description": "Amazing"
+  },
+  "enrollment": ["Marco", "Jana", "فَاطِمَة"],
+  "start": "2025-02-01",
+  "end": null
+}
+```
+always uses UTF-8.
+
+Can convert to and from Javascript using JSON.parse and JSON.stringify
 
 ### The DOM
 
