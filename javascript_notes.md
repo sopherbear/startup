@@ -325,3 +325,64 @@ const coinToss = new Promise((resolve, reject) => {
 //    Coin toss result: tails
 //    Toss completed
 ```
+
+
+## Async/Await
+
+Await wraps the execution of a Promise and blocks it until Promise state is fulfilled. Example:
+
+```
+const coinToss = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (Math.random() > 0.1) {
+        resolve(Math.random() > 0.5 ? 'heads' : 'tails');
+      } else {
+        reject('fell off table');
+      }
+    }, 1000);
+  });
+};
+
+try {
+  const result = await coinToss();
+  console.log(`Toss result ${result}`);
+} catch (err) {
+  console.error(`Error: ${err}`);
+} finally {
+  console.log(`Toss completed`);
+}
+```
+
+we can designate the function as asynchronous so that await works. Example:
+
+```
+async function cow() {
+  return 'moo';
+}
+console.log(cow());
+// OUTPUT: Promise {<fulfilled>: 'moo'}
+```
+It will output upon being fulfilled.
+
+Or we can change it to create a promise.
+
+```
+async function cow() {
+  return new Promise((resolve) => {
+    resolve('moo');
+  });
+}
+console.log(cow());
+//output: promise {<pending>}
+```
+
+Async declares that a function returns a promise. Await stops execution until the promise is resolved, one way or another.
+
+```
+console.log(cow());
+// OUTPUT: Promise {<pending>}
+
+console.log(await cow());
+// OUTPUT: moo
+```
