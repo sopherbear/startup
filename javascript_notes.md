@@ -262,3 +262,66 @@ submitDataEl.addEventListener('click', function (event) {
 
 **FUN FACT**: putting "use strict"; on top of js file makes it stricter, so code is cleaner and safer.
 
+## Local Storage
+
+browser's localStorage allows us to access info later on (like scores, usernames, etc.)
+ 
+
+Functions to use in localStorage:
+
+1. setItem(name, value) : Sets named item's value into local storage.
+2. getItem(name) : get the value from storage
+3. removeItem(name) : removes item from local storage
+4. clear() : clears all items from local storage
+
+
+Storage value MUST be string, number, or boolean.
+
+Example: 
+```
+let user = 'Alice';
+
+let myObject = {
+  name: 'Bob',
+  info: {
+    favoriteClass: 'CS 260',
+    likesCS: true,
+  },
+};
+
+let myArray = [1, 'One', true];
+
+localStorage.setItem('user', user);
+localStorage.setItem('object', JSON.stringify(myObject));
+localStorage.setItem('array', JSON.stringify(myArray));
+
+console.log(localStorage.getItem('user'));
+console.log(JSON.parse(localStorage.getItem('object')));
+console.log(JSON.parse(localStorage.getItem('array')));
+
+```
+
+## Promises
+
+You can't do a lot of rendering at a time on main rendering thread, so the rest is done in a JS Promise.
+
+State of Promise execution: pending (running asynchronously), fulfilled, or rejected.
+
+For a pending state, it can end up returning either resolve or reject.
+
+To do something with a resolved Promise, use then, finally, and catch.
+"Then" is for if the promise is fulfilled, "catch" is for if it is rejected, and "finally" is ALWAYS called after processing is completed.
+
+Example:
+```
+const coinToss = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    if (Math.random() > 0.1) {
+      resolve(Math.random() > 0.5 ? 'heads' : 'tails');
+    } else {
+      reject('fell off table');
+    }
+  }, 10000);
+//    Coin toss result: tails
+//    Toss completed
+```
