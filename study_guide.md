@@ -19,12 +19,17 @@ The div tag groups elements and divides them from other groups of elements (for 
 
 Example:
 ```
+footer {
+  flex: 0 30px;
+  background-color: darkslategray;
+}
+
 .nav-item {
   padding: 0 .3em;
 }
 ```
 
-# Padding vs. Margin (4):
+# Padding vs. Margin (4, 6):
 
 Padding: extra space within an element.
 
@@ -35,17 +40,54 @@ Types of Padding: padding-top, padding-right, padding-bottom, padding-left
 
 or could be written as padding: 40px, 3px, 8px, 90px
 
-5.
-6.
-7.
-8.
-9.
-10.
-11.
-12.
-13.
-14.
-15.
+# Flex(5)
+Example from codepen:
+```
+body {
+  display: flex;
+  flex-direction: column;
+}
+header {
+  flex: 0 80px;
+}
+main {
+  flex: 1;
+  display: flex;
+  flex-direction:row;
+}
+section:nth-child(1) {
+  /*should make the proportions stay the same*/
+  flex:1;
+}
+
+section:nth-child(2) {
+  flex:3;
+}
+
+@media (orientation: portrait) {
+  main {
+    flex-direction: column;
+  }
+}
+
+```
+# Arrow Syntax Function Declaration (7)
+Allows you to use an unnamed function. For example: () => 3; returns 3.
+
+# The DOM(11)
+The DOM is a tree. It represents HTML elements. You can access it through the browser under *document*. That is the top node of the tree.
+
+You can use the DOM to insert, modify, or delete elements. Or to inject HTML.
+
+# Span(12)
+Span defaults to CSS display:inline. This means it will try and fit everything side-by-side.
+
+# Displaying Image with Hyperlink
+```
+<a href="url" id="">
+  <img src "sjdifhwuoh.png alt="shibainu">
+</a>
+```
 16.
 17.
 18.

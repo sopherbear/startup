@@ -64,3 +64,13 @@ For an image, use:
 ## Testing HTML
 
 *To see the html in real time, click the server in the bottom right corner of VScode*
+
+### Links
+
+To add a link to an external file, use a link tag. Example:
+
+```
+<link rel="stylesheet" href="main.css"/>
+<link rel="stylesheet" href="add_recipe.css">
+```
+You MUST have a rel attribute for it to work.
