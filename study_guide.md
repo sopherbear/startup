@@ -88,24 +88,140 @@ Span defaults to CSS display:inline. This means it will try and fit everything s
   <img src "sjdifhwuoh.png alt="shibainu">
 </a>
 ```
-16.
-17.
-18.
-19.
-20.
-21.
-22.
+
+# Box Model
+element > padding > border > margin
+
+# How to use JavaScript on particular elements (18)
+```
+//js file
+function sayHello() {
+  console.log('hello');
+}
+
+```
+```
+//html file
+<head>
+  <script src="javascript.js"></script>
+</head>
+<body>
+  <button onclick="sayHello()">Say Hello</button>
+  <button onclick="sayGoodbye()">Say Goodbye</button>
+  <script>
+    function sayGoodbye() {
+      alert('Goodbye');
+    }
+  </script>
+</body>
+```
+**To get an element with particular id:**
+```
+document.getElementById('elementId')
+```
+# Declaring a file to be HTML (20)
+```
+<!DOCTYPE html>
+```
+# JavaScript Loop Syntax(21)
+
+IF:
+```
+if (a === 1) {
+  //...
+} else if (b === 2) {
+  //...
+} else {
+  //...
+}
+```
+
+FOR:
+```
+for (let i = 0; i < 2; i++) {
+  console.log(i);
+}
+```
+
+WHILE:
+```
+let i = 0;
+while (i < 2) {
+  console.log(i);
+  i++;
+}
+// OUTPUT: 0 1
+```
+SWITCH:
+```
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+```
+
+# Syntax for creating JavaScript Objects
+
+# JavaScript Object
+```
+const person = {};
+
+// Add Properties
+person.firstName = "John";
+person.lastName = "Doe";
+person.age = 50;
+person.eyeColor = "blue";
+```
 23.
-24.
-25.
-26.
-27.
-28.
-29.
-30.
-31.
-32.
-33.
+# include JavaScript on html page:
+Use the "script" tag.
+Or use a link.
+
+# What is JSON?
+JSON is JavaScript Object? Notation
+It works similarly to a map, but convertible to and from js objects. uses key value pairs. Keys must be strings. 
 
 
+# Console Commands
+chmod: changes file permissions
 
+pwd: print working directory
+
+cd:change directory
+
+ls: list 
+
+vim:text editor
+
+nano: text editor
+
+mkdir: makes a directory
+
+mv: move/rename
+
+rm: remove
+
+man: displays manual
+
+ssh: secure remote login ***remote shell session***
+
+ps: info about currently running processes
+
+wget:download files from web
+
+sudo: execute command as other user
+
+
+ls -la : lists in long format, even hidden ones.
+
+root domain: main website (familyrecipebook.click)
+subdomain: other sections(startup.)
+top-level domain: the suffix (like .com)
+
+web certificate necessary
