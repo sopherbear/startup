@@ -1,7 +1,17 @@
 # React Notes
 React combines JavaScript and HTML into its component format, but CSS has to be separate. The JavaScript and HTML go into a JSX file.
 
-We run JSX through Babel so that the browset can actually do stuff with it.
+Example JSX: The horrible lovechild of HTML and JavaScript:
+```
+const i = 3;
+const list = (
+  <ol class='big'>
+    <li>Item {i}</li>
+    <li>Item {3 + i}</li>
+  </ol>
+);
+```
+We run JSX through Babel, which converts JSX into intelligible JavaScript for the browser to read. It turns things into elements using ".createElement"
 
 ## Babel in Codepen
 Need to import React and import Reactdom.
