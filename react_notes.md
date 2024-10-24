@@ -57,3 +57,43 @@ function Name({n}) {
 // the following code injects that paragraph into the root ID within the HTML
 ReactDOM.render(<Hello />, document.querySelector("#root"));
 ```
+
+### Properties
+
+I can pass information to a component using element properties. Example:
+
+```
+JSX
+//Demo is not an HTML component, but react will replace it with the rendered code, so it will work.
+ <div>Component: <Demo who="Sophie" /></div>
+
+
+React Component
+function Demo(props) {
+  //since "who" is defined and we pass in props as a parameter, is should print correctly.
+  return <b>Hello {props.who}</b>;
+}
+
+Resulting HTML
+<div>Component: <b>Hello Sophie</b></div>
+```
+If I call an HTML element that doesn't exist, react knows to look for that function and call render() on it so that it will work.
+
+### State
+Components can have internal state. The following code creates a state variable called "clicked".
+
+```
+const Clicker = () => {
+  // React.useState() returns a variable that contains the current state. So here, it will be able to say if button has been clicked.
+  const [clicked, updateClicked] = React.useState(false);
+
+  const onClicked = (e) => {
+    updateClicked(!clicked);
+  };
+
+  return <p onClick={(e) => onClicked(e)}>clicked: {`${clicked}`}</p>;
+};
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Clicker />);
+```
