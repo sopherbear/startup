@@ -142,3 +142,32 @@ OK, I think I follow what's going on here. The idea is that we want the header a
 
 ## Vite
 Vite is a command line interface that allows your to bundle and debug code well.
+
+
+## React Router
+To create a new React-based web application using Vite, open your console and run the following commands:
+```
+//don't have to name the thing demovite
+npm create vite@latest demoVite -- --template react
+cd demoVite
+npm install
+// the following code bundles what you have so the debugger can work
+npm run dev
+```
+press o to open the url
+
+press q to have vite stop hosting the application
+
+The main files are index.html, main.jsx, and App.jsx. Browser loads index.html (provides #root) that React application will inject into. 
+main.jsx associates #root element with App component in App.jsx, so it can be injected into index.html.
+
+Vite and Babel use jsx files, so that's why we use them, too.
+
+### TO ACTUALLY DEPLOY TO PRODUCTION ENVIRONMENT
+To bundle code so it can actually be deployed:
+```
+npm run build
+```
+
+To actually deploy:
+call deployReact.sh file in Simon, run npm run build  within it, and copy resulting dist into production server.
