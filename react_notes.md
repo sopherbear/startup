@@ -1,7 +1,7 @@
 # React Notes
 React combines JavaScript and HTML into its component format, but CSS has to be separate. The JavaScript and HTML go into a JSX file.
 
-Example JSX: The horrible lovechild of HTML and JavaScript:
+Example JSX: The horrible lovechild of HTML and JSON:
 ```
 const i = 3;
 const list = (
@@ -19,6 +19,14 @@ Specify that the JavaScript Preprocessor is Babel, and it should work fine.
 
 ## Components
 (Think like header, footer, main)
+
+REMEMBER: with ReactDOM.render, you have to pass in the function you are using from JSX and the html element where you want it to be placed.
+
+Example:
+```
+// App is the JSX function, root is the html div element id.
+ReactDOM.render(<App />, document.getElementById("root"));
+```
 
 Example of a simple component:
 ```
@@ -97,3 +105,40 @@ const Clicker = () => {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Clicker />);
 ```
+
+### Class Style Components
+Not commonly used anymore. This is an example of the clicker in this style:
+```
+class Clicker extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      clicked: false,
+    };
+  }
+  onClicked() {
+    this.setState({
+      clicked: !this.state.clicked,
+    });
+  }
+  render() {
+    return <p onClick={(e) => this.onClicked(e)}>clicked: {`${this.state.clicked}`}</p>;
+  }
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Clicker />);
+```
+
+## React Toolchains
+Tools that we use to abstract out areas of code, I guess.
+The toolchain we use for class: Github (for repository), Vite (for JSX, etc), ESBuild, Rollup, PostCSS, bash script
+
+
+## React Notes from in class
+We're moving from a multi-page application to a single-page application that will switch out pages using the router.
+
+OK, I think I follow what's going on here. The idea is that we want the header and footer to remain the same, and we want to be able to inject whatever is in main based on interaction with the navigation bar. Home would be the default path. THAT'S FREAKING COOL, MAN.
+
+## Vite
+Vite is a command line interface that allows your to bundle and debug code well.
