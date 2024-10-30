@@ -250,3 +250,49 @@ const Question = ({ answer }) => {
 
 ReactDOM.render(<Survey />, document.getElementById('root'));
 ```
+
+## TicTacToe Activity Stuff
+* To track state in React, import \<useState\> from 'react';
+* **Export**: makes a function accessible outside of the js file
+* **Default**: tells other files this is the main function in the file
+* \<button className="square"\>: className indicates a class or property. In this case, square is a property of button that makes it square.
+
+React can only return one JSX element at a time, so if we want to return multiple, they need to all be wrapped like so:
+```
+dhfiwfhu )
+<>
+  <button sdfihwufho wi></button>
+  <button huifhw efhowhif></button>
+</>
+);
+```
+Add in \<div\> elements so that the rows wrap properly.
+```
+<>
+  <div className="board-row">
+    <button sdfihwufho wi></button>
+  </div>
+  <div className="board-row">
+    <button huifhw efhowhif></button>
+  </div>
+</>
+```
+
+We end up making a square component using that button code so that we can populate board with squares instead of repeat code.
+
+We're going to want to pass in a value {number} so that each square has a unique number:
+```
+function Square({ value }) {
+  return <button className="square">{value}</button>;
+}
+```
+Now for each instance of Square, we can put value="#" to fill it in.
+
+We add in handleClick function to change if a square has been clicked, and import state so that we can remember it has been clicked and mark it.
+
+For the index.js file:
+* import React, { StrictMode } from "react"; //imports React so you can use it
+* import {createRoot} from "react-dom/client"; //allows you to communicate with browser via ReactDOM
+* import "./styles.css"; // imports my CSS file
+* import App from "./App"; //imports components in app.js
+  
