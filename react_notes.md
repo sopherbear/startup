@@ -257,9 +257,15 @@ ReactDOM.render(<Survey />, document.getElementById('root'));
 * **Default**: tells other files this is the main function in the file
 * \<button className="square"\>: className indicates a class or property. In this case, square is a property of button that makes it square.
 
+For the index.js file:
+* import React, { StrictMode } from "react"; //imports React so you can use it
+* import {createRoot} from "react-dom/client"; //allows you to communicate with browser via ReactDOM
+* import "./styles.css"; // imports my CSS file
+* import App from "./App"; //imports components in app.js
+
 React can only return one JSX element at a time, so if we want to return multiple, they need to all be wrapped like so:
 ```
-dhfiwfhu )
+dhfiwfhu (
 <>
   <button sdfihwufho wi></button>
   <button huifhw efhowhif></button>
@@ -290,9 +296,15 @@ Now for each instance of Square, we can put value="#" to fill it in.
 
 We add in handleClick function to change if a square has been clicked, and import state so that we can remember it has been clicked and mark it.
 
-For the index.js file:
-* import React, { StrictMode } from "react"; //imports React so you can use it
-* import {createRoot} from "react-dom/client"; //allows you to communicate with browser via ReactDOM
-* import "./styles.css"; // imports my CSS file
-* import App from "./App"; //imports components in app.js
+Since we are tracking state, instead of passing in value to square, we will define a const [value, setValue] = useState(null).
+
+**Value** stores the value. **setValue** is a function that lets us change the value.
+
+The handleClick function we wrote will copy the squares array and update it. 
+
+
+
+**IMMUTABILITY**: In this code, we make a copy of the array "squares" that is called "nextSquares". This is good practice, since we can alter
+nexSquares without messing with squares itself, which preserves past instances of the list and allows the program to check if components have
+changed or not, which makes the process of rerendering board cheaper.
   
