@@ -307,4 +307,47 @@ The handleClick function we wrote will copy the squares array and update it.
 **IMMUTABILITY**: In this code, we make a copy of the array "squares" that is called "nextSquares". This is good practice, since we can alter
 nexSquares without messing with squares itself, which preserves past instances of the list and allows the program to check if components have
 changed or not, which makes the process of rerendering board cheaper.
-  
+
+
+
+## React Hooks
+They allow functional components (functions that return react components) to use state and other things. They always start with
+"use" (e.g. "useState", "useEffect")
+
+**useEffect**: lets you represent life cycle events
+
+Example: to run a function every time component completes rendering:
+```
+function UseEffectHookDemo() {
+  React.useEffect(() => {
+    console.log('rendered');
+  });
+
+  return <div>useEffectExample</div>;
+}
+
+ReactDOM.render(<UseEffectHookDemo />, document.getElementById('root'));
+```
+
+Another example with cleanup:
+```
+function UseEffectHookDemo() {
+  const [count, updateCount] = React.useState(0);
+  React.useEffect(() => {
+    console.log('rendered');
+
+    return function cleanup() {
+      console.log('cleanup');
+    };
+  });
+
+  return <div onClick={() => updateCount(count + 1)}>useEffectExample {count}</div>;
+}
+
+ReactDOM.render(<UseEffectHookDemo />, document.getElementById('root'));
+```
+### Hook Dependencies
+Hook dependencies determine what triggers useEffect.
+
+
+## Simon React Learning
