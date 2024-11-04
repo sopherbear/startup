@@ -351,3 +351,297 @@ Hook dependencies determine what triggers useEffect.
 
 
 ## Simon React Learning
+***Steps to Convert html/css into React application***
+
+1. Install and configure Vite
+2. Reorganize the code
+3. Convert to React Bootstrap
+4. Enable React
+5. Create app component
+6. Create view components
+7. Create the router
+8. Convert HTML to React components
+9. Replace deployment script
+
+### Install and Configure Vite
+First, in the project root directory, run the following code:
+```
+// this basically installs a json(convertible to and from javascript) file for you with some defaults
+npm init -y
+
+///installs Vite, which serves code locally during development. Basically, allows me to check up on stuff as I build it.
+npm install vite@latest -D
+```
+
+In the new package.json, replace default scripts with this:
+```
+ "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  }
+```
+
+add node_modules to .gitignore file
+
+### Reorganize the Code
+Create a public folder, then move placeholder.jpg and favicon.ico into it. (All static assets go here, like sounds and images)
+
+Create and src folder for all the react code, then create a folder within that folder for each view component. (In this case, about, login,
+play, and scores). Rename **main.css** to **app.css** and put it under the src folder. (all codey components and stuff will go here.)
+
+### Convert to React Bootstrap
+Install the react version of bootstrap:
+```
+npm install bootstrap react-bootstrap
+```
+Now we can import bootstrap stylesin any components we want using this:
+```
+import 'bootstrap/dist/css/bootstrap.min.css';
+```
+
+To use a bootstrap COMPONENT, import the particular component. Example with Button component:
+```
+import Button from 'react-bootstrap/Button';
+
+export function NavButton({ text, url }) {
+  const navigate = useNavigate();
+  return (
+    <Button variant='primary' onClick={() => navigate({ url })}>
+      {text}
+    </Button>
+  );
+}
+```
+### Enabling React
+install React.
+```
+npm install react react-dom react-router-dom
+```
+Rename index.html to login.html, then create new index.html to represent React SPA entry port.
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+
+    <title>Simon React</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!--All the code is injected in root-->
+    <div id="root"></div>
+    <script type="module" src="/index.jsx"></script>
+  </body>
+</html>
+```
+The script reference for index.jsx causes the injection of the top level component named App.
+
+Create an index.jsx file:
+```
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './src/app';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+```
+
+### Create App Component
+Create an app.jsx file underneath **src** folder and add in the following code:
+```
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './app.css';
+
+export default function App() {
+  return <div className='body bg-dark text-light'>App will display here</div>;
+}
+```
+Modify app.css so that the selector is *.body* rather than *body*, which doesn't exist in react.
+
+
+***IMPORTANT***: NOW YOU SHOULD BE ABLE TO RUN THROUGH THE TERMINAL by running the following:
+```
+npm run dev
+
+o
+```
+It won't look like much, but it will run. 
+
+MAKE SURE TO COMMIT HERE ON THE ACTUAL STARTUP.
+
+Then we will add in the code for the header, footer, and a placeholder for main. MAKE SURE TO PUT ALL THIS CODE INSIDE A DIV ELEMENT.
+Rename all the "class" to "className".
+
+Example:
+```
+export default function App() {
+  return (
+    <div className='body bg-dark text-light'>
+      <header className='container-fluid'>
+        <nav className='navbar fixed-top navbar-dark'>
+          <div className='navbar-brand'>
+            Simon<sup>&reg;</sup>
+          </div>
+          <menu className='navbar-nav'>
+            <li className='nav-item'>
+              <a className='nav-link' href='index.html'>
+                Home
+              </a>
+            </li>
+            <li className='nav-item'>
+              <a className='nav-link' href='play.html'>
+                Play
+              </a>
+            </li>
+            <li className='nav-item'>
+              <a className='nav-link' href='scores.html'>
+                Scores
+              </a>
+            </li>
+            <li className='nav-item'>
+              <a className='nav-link' href='about.html'>
+                About
+              </a>
+            </li>
+          </menu>
+        </nav>
+      </header>
+
+      <main>App components go here</main>
+
+      <footer className='bg-dark text-white-50'>
+        <div className='container-fluid'>
+          <span className='text-reset'>Author Name(s)</span>
+          <a className='text-reset' href='https://github.com/webprogramming260/simon-react'>
+            Source
+          </a>
+        </div>
+      </footer>
+    </div>
+  );
+}
+```
+
+MAKE SURE TO COMMIT AGAIN HERE.
+
+### Create View Components
+Create jsx files for all the view components for the main section. Here's some example code:
+```
+import React from 'react';
+
+export function Login() {
+  return (
+    <main className='container-fluid bg-secondary text-center'>
+      <div>login displayed here</div>
+    </main>
+  );
+}
+```
+Remember to replace all "class" with "className"
+
+### Create the Router
+The router will display each main section as requested.
+Import the router component and all the view components into app.jsx component.
+```
+import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
+import { Login } from './login/login';
+import { Play } from './play/play';
+import { Scores } from './scores/scores';
+import { About } from './about/about';
+```
+Wrap the elements within component in app.jsx with <\BrowserRouter><\BrowserRouter>
+
+### Navigating Routes
+```
+<a className="nav-link" href="play.html">Play</a>
+
+// to
+
+<NavLink className='nav-link' to='play'>Play</NavLink>
+```
+### Injecting the Routed Element
+In app.jsx elements:
+```
+ <main>App components go here</main>
+
+ // to
+
+<Routes>
+  <Route path='/login' element={<Login />} exact />
+  <Route path='/play' element={<Play />} />
+  <Route path='/scores' element={<Scores />} />
+  <Route path='/about' element={<About />} />
+  <Route path='*' element={<NotFound />} />
+</Routes>
+```
+(The * makes it so you can handle if an unknown path is requested.)
+
+Add in this code to the bottom of app.jsx so it can actually handle those cases.
+```
+function NotFound() {
+  return <main className='container-fluid bg-secondary text-center'>404: Return to sender. Address unknown.</main>;
+}
+```
+
+### Converting to React Components
+create jsx files with each insertable main element needed on the website. Make sure to import the css files. Example:
+```
+import './play.css';
+```
+Delete redundant html files.
+
+### Deployment Script
+Delete deployfiles.sh.
+
+Create deployReact.sh, fill it with the following code.
+```
+while getopts k:h:s: flag
+do
+    case "${flag}" in
+        k) key=${OPTARG};;
+        h) hostname=${OPTARG};;
+        s) service=${OPTARG};;
+    esac
+done
+
+if [[ -z "$key" || -z "$hostname" || -z "$service" ]]; then
+    printf "\nMissing required parameter.\n"
+    printf "  syntax: deployReact.sh -k <pem key file> -h <hostname> -s <service>\n\n"
+    exit 1
+fi
+
+printf "\n----> Deploying React bundle $service to $hostname with $key\n"
+
+# Step 1
+printf "\n----> Build the distribution package\n"
+rm -rf build
+mkdir build
+npm install # make sure vite is installed so that we can bundle
+npm run build # build the React front end
+cp -rf dist/* build # move the React front end to the target distribution
+
+# Step 2
+printf "\n----> Clearing out previous distribution on the target\n"
+ssh -i "$key" ubuntu@$hostname << ENDSSH
+rm -rf services/${service}/public
+mkdir -p services/${service}/public
+ENDSSH
+
+# Step 3
+printf "\n----> Copy the distribution package to the target\n"
+scp -r -i "$key" build/* ubuntu@$hostname:services/$service/public
+
+# Step 5
+printf "\n----> Removing local copy of the distribution package\n"
+rm -rf build
+rm -rf dist
+```
+## Simon React Javascript
+Adding in interactivity
+
+### About component
