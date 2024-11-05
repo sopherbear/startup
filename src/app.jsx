@@ -3,7 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
 
 export default function App() {
-  return <div className='body bg-dark text-light'>
+  return (
+  <div className='body bg-dark text-light'>
      <header class="container-fluid">
             <nav class="navbar fixed-top navbar-dark">
               <a class="navbar-brand">Family Recipe Book</a>
@@ -33,5 +34,6 @@ export default function App() {
             </div>
         </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-  </div>;
+  </div>
+  );
 }
