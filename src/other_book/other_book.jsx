@@ -2,7 +2,7 @@ import React from 'react';
 
 export function Other_book() {
   return(
-    <main>
+    <main className='container-fluid bg-secondary text-center'>
     <section>
         <div>
             {/*<!--Need to put placeholder for whatever they name their recipebook-->*/}

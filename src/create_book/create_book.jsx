@@ -1,8 +1,8 @@
 import React from 'react';
 
-export function create_book() {
+export function Create_book() {
   return (
-    <main>
+    <main className='container-fluid bg-secondary text-center'>
             {/*/<!--I think I need to specify where this information will end up going in the action area. Will put placeholder for now.-->*/}
             {/*<!--Review the following code and make sure I'm not missing anything.-->}*/}
             <div>

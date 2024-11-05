@@ -2,7 +2,7 @@ import React from 'react';
 
 export function List_other_books() {
   return (
-    <main>
+    <main className='container-fluid bg-secondary text-center'>
             <h2>Other Recipe Books</h2>
             <div className="bd-example bd-example-placeholder-cards d-flex justify-content-around">
                 <div className="card">

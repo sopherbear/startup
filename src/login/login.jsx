@@ -2,7 +2,7 @@ import React from 'react';
 
 export function Login() {
   return(
-    <main className="container-fluid text-center">
+    <main className='container-fluid bg-secondary text-center'>
     <div>
         <h2>Welcome to Family Recipe Book!</h2>
         <form method="get" action="#" actiones="#">

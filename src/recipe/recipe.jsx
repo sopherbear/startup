@@ -2,7 +2,7 @@ import React from 'react';
 
 export function Recipe() {
   return(
-    <main>
+    <main className='container-fluid bg-secondary text-center'>
         {/*<!--All the following information will come from the add_recipe form.-->*/}
         <section id="intro">
           <p><b>Placeholder Recipe Name</b></p>
