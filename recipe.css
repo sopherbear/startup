@@ -1,5 +1,9 @@
 main{
   padding: 2 em;
   margin: 2 em;
-  border-style: dotted;
+  border-style: dotted, whitesmoke;
+}
+
+#intro, #ingredients{
+  border-bottom: thick, whitesmoke;
 }
