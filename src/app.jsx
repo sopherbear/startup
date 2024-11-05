@@ -2,9 +2,16 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
 
+import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
+import { Login } from './login/login';
+import { Play } from './play/play';
+import { Scores } from './scores/scores';
+import { About } from './about/about';
+
 export default function App() {
   return (
-  <div className='body bg-dark text-light'>
+  <BrowserRouter>
+    <div className='body bg-dark text-light'>
      <header className="container-fluid">
             <nav className="navbar fixed-top navbar-dark">
               <a className="navbar-brand">Family Recipe Book</a>
@@ -33,7 +40,8 @@ export default function App() {
                 <a className="text-reset" href="https://github.com/sopherbear/startup.git">Github</a>
             </div>
         </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-  </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </div>
+  </BrowserRouter>
   );
 }
