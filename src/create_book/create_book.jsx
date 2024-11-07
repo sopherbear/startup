@@ -5,7 +5,7 @@ export function Create_book() {
     <main className='container-fluid text-center'>
             {/*/<!--I think I need to specify where this information will end up going in the action area. Will put placeholder for now.-->*/}
             {/*<!--Review the following code and make sure I'm not missing anything.-->}*/}
-            <div>
+            <div className='root'>
                 <h2 ClassName="text-align: center;">Create a Recipe Book!</h2>
                 <form action="#" method="get">
                     <div className="input-group mb-3">

@@ -5,7 +5,7 @@ import './other_book.css';
 export function Other_book() {
   return(
     <main className='container-fluid text-center'>
-    <section>
+    <section className='root'>
         <div>
             {/*<!--Need to put placeholder for whatever they name their recipebook-->*/}
             <h2>Other Recipe Book</h2>
@@ -14,7 +14,7 @@ export function Other_book() {
             <figcaption>PLACEHOLDER FOR BOOK NAME</figcaption>
         </div>
     </section>
-    <section>
+    <section className='root'>
         <div className="bd-example">
             <div className="accordion" id="accordionPanelsOpen">
                 <div className="accordion-item">

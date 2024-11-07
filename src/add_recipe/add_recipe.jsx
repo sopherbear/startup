@@ -4,7 +4,7 @@ import './add_recipe.css';
 export function Add_recipe() {
   return(
     <main className="container-fluid text-center">
-            <div>
+            <div className='root'>
                 <h2 className="text-align: center;">Add a Recipe</h2>
                 <form action="#" method="get">
                     <span className="input-group-text">What do you want to call this recipe?</span>

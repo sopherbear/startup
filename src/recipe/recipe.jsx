@@ -5,7 +5,8 @@ export function Recipe() {
   return(
     <main className='container-fluid text-center'>
         {/*<!--All the following information will come from the add_recipe form.-->*/}
-        <section id="intro">
+      <div className='root'>
+      <section id="intro">
           <p><b>Placeholder Recipe Name</b></p>
           <p><i>Placeholder recipe description</i></p>
         </section>
@@ -29,6 +30,7 @@ export function Recipe() {
             </ol>
           </p>
         </section>
-      </main>
+      </div>  
+    </main>
   );
 }
