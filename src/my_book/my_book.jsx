@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './my_book.css'
 
 export function My_book() {
   return(
@@ -128,7 +129,8 @@ export function My_book() {
                 <NavLink to="/add_recipe">Click Here to Add a Recipe!</NavLink>
             </div>
         </div>
-      </section>
+    </section>
 </main>
+
   );
 }

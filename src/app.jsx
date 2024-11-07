@@ -47,7 +47,6 @@ function App() {
           <Route path='/recipe' element={<Recipe />} />
           <Route path='/*' element={<NotFound />} />
         </Routes>
-
         <footer>
             <div className="container-fluid">
                 <span className="text-reset">Sophie Larsen</span>
