@@ -1,4 +1,5 @@
 import React from 'react';
+import './add_recipe.css';
 
 export function Add_recipe() {
   return(

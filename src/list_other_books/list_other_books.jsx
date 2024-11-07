@@ -1,4 +1,5 @@
 import React from 'react';
+import './list_other_books.css';
 
 export function List_other_books() {
   return (

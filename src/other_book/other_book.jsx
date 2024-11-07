@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './other_book.css';
 
 export function Other_book() {
   return(
