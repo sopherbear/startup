@@ -4,7 +4,7 @@ export function Add_recipe() {
   return(
     <main className="container-fluid text-center">
             <div>
-                <h2 style="text-align: center;">Add a Recipe</h2>
+                <h2 className="text-align: center;">Add a Recipe</h2>
                 <form action="#" method="get">
                     <span className="input-group-text">What do you want to call this recipe?</span>
                     <input className="form-control" type="text" placeholder="Name your recipe!" required/>
@@ -22,7 +22,7 @@ export function Add_recipe() {
                     </div>
                     <div>
                         <span className="input-group-text">Categorize recipe:
-                            <select id="categories" name="var_categories" style="color:black; margin: .3em;">
+                            <select id="categories" name="var_categories" ClassName="color:black; margin: .3em;">
                                 <option >Mains</option>
                                 <option>Soups</option>
                                 <option>Breads</option>

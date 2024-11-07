@@ -15,7 +15,7 @@ import { Recipe } from './recipe/recipe';
 function App() {
   return (
   <BrowserRouter>
-    <div className='body bg-dark text-light'>
+    <div className='body'>
      <header className="container-fluid">
             <nav className="navbar fixed-top navbar-dark">
               <div className="navbar-brand">Family Recipe Book</div>
@@ -38,6 +38,7 @@ function App() {
         
         <Routes>
           <Route path='/' element={<Login />} exact />
+          <Route path='/login' element={<Login/>} />
           <Route path='/add_recipe' element={<Add_recipe />} />
           <Route path='/create_book' element={<Create_book />} />
           <Route path='/list_other_books' element={<List_other_books />} />
@@ -53,7 +54,7 @@ function App() {
                 <a className="text-reset" href="https://github.com/sopherbear/startup.git">Github</a>
             </div>
         </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossOrigin="anonymous"></script>
     </div>
   </BrowserRouter>
   );

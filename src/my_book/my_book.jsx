@@ -1,8 +1,9 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 export function My_book() {
   return(
-    <main className='container-fluid bg-secondary text-center'>
+    <main className='container-fluid text-center'>
       <section>
           <div>
             {/*<!--Need to put placeholder for whatever they name their recipebook-->*/}
@@ -23,14 +24,14 @@ export function My_book() {
                     </h2>
                     <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div className="accordion-body">
-                            <select style="color:black; margin: .3em;">
-                                <option>
-                                    <a href="recipe.html">Recipe1</a>
-                                </option>
-                                <option>
-                                    <a href="recipe.html">Recipe2</a>
-                                </option>
-                            </select>
+                            <div style={{ color: 'black', margin: '0.3em' }}>
+                                <div>
+                                    <NavLink to="/recipe">Recipe1</NavLink>
+                                </div>
+                                <div>
+                                    <NavLink to="/recipe">Recipe2</NavLink>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -42,14 +43,14 @@ export function My_book() {
                     </h2>
                     <div id="panelsStayOpen-collapseTwo" className="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo" data-bs-parent="#accordionExample">
                         <div className="accordion-body">
-                            <select style="color:black; margin: .3em;">
-                                <option>
-                                    <a href="recipe.html">Recipe1</a>
-                                </option>
-                                <option>
-                                    <a href="recipe.html">Recipe2</a>
-                                </option>
-                            </select>
+                            <div style={{ color: 'black', margin: '0.3em' }}>
+                                <div>
+                                    <NavLink to="/recipe">Recipe1</NavLink>
+                                </div>
+                                <div>
+                                    <NavLink to="/recipe">Recipe2</NavLink>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -59,16 +60,16 @@ export function My_book() {
                             Breads:
                         </button>
                     </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                         <div className="accordion-body">
-                            <select style="color:black; margin: .3em;">
-                                <option>
-                                    <a href="recipe.html">Recipe1</a>
-                                </option>
-                                <option>
-                                    <a href="recipe.html">Recipe2</a>
-                                </option>
-                            </select>
+                            <div style={{ color: 'black', margin: '0.3em' }}>
+                                <div>
+                                    <NavLink to="/recipe">Recipe1</NavLink>
+                                </div>
+                                <div>
+                                    <NavLink to="/recipe">Recipe2</NavLink>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -80,14 +81,14 @@ export function My_book() {
                     </h2>
                     <div id="collapseFour" className="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                         <div className="accordion-body">
-                            <select style="color:black; margin: .3em;">
-                                <option>
-                                    <a href="recipe.html">Recipe1</a>
-                                </option>
-                                <option>
-                                    <a href="recipe.html">Recipe2</a>
-                                </option>
-                            </select>
+                            <div style={{ color: 'black', margin: '0.3em' }}>
+                                <div>
+                                    <NavLink to="/recipe">Recipe1</NavLink>
+                                </div>
+                                <div>
+                                    <NavLink to="/recipe">Recipe2</NavLink>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -99,14 +100,14 @@ export function My_book() {
                     </h2>
                     <div id="collapseFive" className="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
                         <div className="accordion-body">
-                            <select style="color:black; margin: .3em;">
-                                <option>
-                                    <a href="recipe.html">Recipe1</a>
-                                </option>
-                                <option>
-                                    <a href="recipe.html">Recipe2</a>
-                                </option>
-                            </select>
+                            <div style={{ color: 'black', margin: '0.3em' }}>
+                                <div>
+                                    <NavLink to="/recipe">Recipe1</NavLink>
+                                </div>
+                                <div>
+                                    <NavLink to="/recipe">Recipe2</NavLink>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -118,13 +119,13 @@ export function My_book() {
                     </h2>
                     <div id="Six" className="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
                         <div className="accordion-body">
-                            <select style="color:black; margin: .3em;">
-                               <a href="add_recipe.html">Click Here to Add a Recipe!</a>
-                            </select>
+                            <div style={{color:'black', margin: '.3em'}}>
+                               <NavLink to="/add_recipe">Click Here to Add a Recipe!</NavLink>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <a href="add_recipe.html">Click Here to Add a Recipe!</a>
+                <NavLink to="/add_recipe">Click Here to Add a Recipe!</NavLink>
             </div>
         </div>
       </section>

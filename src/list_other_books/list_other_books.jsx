@@ -2,7 +2,7 @@ import React from 'react';
 
 export function List_other_books() {
   return (
-    <main className='container-fluid bg-secondary text-center'>
+    <main className='container-fluid text-center'>
             <h2>Other Recipe Books</h2>
             <div className="bd-example bd-example-placeholder-cards d-flex justify-content-around">
                 <div className="card">
@@ -14,7 +14,7 @@ export function List_other_books() {
                     <div className="card-body">
                       <h5 className="card-title">Book1</h5>
                       <p className="card-text">Recipebook by User</p>
-                      <a href="other_book.html" className="btn btn-primary">Recipebook 1</a>
+                      <NavLink to="/other_book" className="btn btn-primary">Recipebook 1</NavLink>
                     </div>
                 </div>
                 
@@ -28,7 +28,7 @@ export function List_other_books() {
                     <div className="card-body">
                       <h5 className="card-title">Book1</h5>
                       <p className="card-text">Recipebook by User</p>
-                      <a href="other_book.html" className="btn btn-primary">Recipebook 1</a>
+                      <NavLink to="/other_book" className="btn btn-primary">Recipebook 1</NavLink>
                     </div>
             
                 </div>
@@ -43,7 +43,7 @@ export function List_other_books() {
                     <div className="card-body">
                       <h5 className="card-title">Book1</h5>
                       <p className="card-text">Recipebook by User</p>
-                      <a href="other_book.html" class="btn btn-primary">Recipebook 1</a>
+                      <NavLink to="/other_book" class="btn btn-primary">Recipebook 1</NavLink>
                     </div>
             
                 </div>
@@ -55,7 +55,7 @@ export function List_other_books() {
                     <div className="card-body">
                       <h5 className="card-title">Book1</h5>
                       <p className="card-text">Recipebook by User</p>
-                      <a href="other_book.html" className="btn btn-primary">Recipebook 1</a>
+                      <NavLink to="/other_book" className="btn btn-primary">Recipebook 1</NavLink>
                     </div>
                 </div>
             </div>    
