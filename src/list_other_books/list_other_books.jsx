@@ -1,10 +1,12 @@
 import React from 'react';
 import './list_other_books.css';
+import { NavLink } from 'react-router-dom';
 
 export function List_other_books() {
   return (
     <main className='container-fluid text-center'>
-            <h2>Other Recipe Books</h2>
+      <div className='root'>
+      <h2>Other Recipe Books</h2>
             <div className="bd-example bd-example-placeholder-cards d-flex justify-content-around">
                 <div className="card">
                     <svg className="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -19,7 +21,7 @@ export function List_other_books() {
                     </div>
                 </div>
                 
-                <br>
+                {/* <br> */}
 
                 <div className="card">
                     <svg className="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -34,7 +36,7 @@ export function List_other_books() {
             
                 </div>
 
-                </br>
+                {/* </br> */}
 
                 <div className="card">
                     <svg className="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -44,7 +46,7 @@ export function List_other_books() {
                     <div className="card-body">
                       <h5 className="card-title">Book1</h5>
                       <p className="card-text">Recipebook by User</p>
-                      <NavLink to="/other_book" class="btn btn-primary">Recipebook 1</NavLink>
+                      <NavLink to="/other_book" className="btn btn-primary">Recipebook 1</NavLink>
                     </div>
             
                 </div>
@@ -60,6 +62,7 @@ export function List_other_books() {
                     </div>
                 </div>
             </div>    
-        </main>
+      </div>
+    </main>
   );
 }
