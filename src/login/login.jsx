@@ -3,9 +3,9 @@ import React from 'react';
 export function Login() {
   return(
     <main className='container-fluid text-center'>
-    <div>
+    <div className='root'>
         <h2>Welcome to Family Recipe Book!</h2>
-        <form method="get" action="#" actiones="#">
+        <form className='login_info' method="get" action="#" actiones="#">
             <div className="input-group mb-3">
                 <span className="input-group-text">Username: </span>
                 <input className="form-control" type="text" placeholder="Your username here" />

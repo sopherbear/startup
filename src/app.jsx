@@ -47,7 +47,8 @@ function App() {
           <Route path='/recipe' element={<Recipe />} />
           <Route path='/*' element={<NotFound />} />
         </Routes>
-        <footer>
+        
+        <footer className='footer'>
             <div className="container-fluid">
                 <span className="text-reset">Sophie Larsen</span>
                 <a className="text-reset" href="https://github.com/sopherbear/startup.git">Github</a>
