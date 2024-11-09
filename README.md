@@ -71,8 +71,8 @@ For this deliverable, I formatted the appearance of my application.
 
 For this deliverable, I used Javascript and React so that the application could be interactive. I also added placeholders for later units.
 
-- [] **Bundled and Transpiled**: I bundled and transpiled my old html code.
-- [] **Components**: 
+- [X] **Bundled and Transpiled**: I bundled and transpiled my old html code.
+    - [] **Components**: Created stub components for main and used mocks for login, creating new books, and new recipes
     - [] **Login**:
     - [] **Database**:
     - [] **WebSocket**:

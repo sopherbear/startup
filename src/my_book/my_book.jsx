@@ -1,136 +1,117 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './my_book.css'
+import { Accordion } from 'react-bootstrap';
 
-export function My_book() {
+export function My_book(props) {
+    //The following block lets us get urls for the random images we will eventually use.
+  const [imageUrl, setImageUrl] = React.useState('');
+  //the following line initializes a state variable called quote, which will be updated by a function called setQuote, which is called later on.
+  const [bookName, setBookName] = React.useState('Loading...');
+
+
+  //we provide empty dependency list at the end so that it only renders the first time that the component is created
+  React.useEffect(() => {
+    setImageUrl(`./pictures/pexels-ash-craig-122861-376464.jpg`);
+    setBookName('Sophie\'s Recipes');
+  }, []);
+
   return(
     <main className='container-fluid text-center'>
       <section className='root'>
           <div>
-            {/*<!--Need to put placeholder for whatever they name their recipebook-->*/}
             <h2>My Recipe Book</h2>
             {/*<!--NEED TO ADD A TEXT LABEL FOR THE PICTURE and make sure the picture is the same as on the other pages.-->*/}
-            <img src="pictures/pexels-ash-craig-122861-376464.jpg" alt="My Recipe Book"/>
-            <figcaption>PLACEHOLDER FOR BOOK NAME</figcaption>
+            <img src={imageUrl} alt="Food Image"/>
+            <figcaption>{bookName}</figcaption>
+            <NavLink to="/add_recipe" className="btn btn-primary">Click Here to Add a Recipe!</NavLink>
           </div>
         </section>
+
       <section className='root'>
         <div className="bd-example">
-            <div className="accordion" id="accordionPanelsOpen">
-                <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingOne">
-                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Mains:
-                        </button>
-                    </h2>
-                    <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                        <div className="accordion-body">
-                            <div style={{ color: 'black', margin: '0.3em' }}>
-                                <div>
-                                    <NavLink to="/recipe">Recipe1</NavLink>
-                                </div>
-                                <div>
-                                    <NavLink to="/recipe">Recipe2</NavLink>
-                                </div>
+            <Accordion defaultActiveKey='0'>
+                <Accordion.Item eventKey='0'>
+                    <Accordion.Header>Mains</Accordion.Header>
+                    <Accordion.Body>
+                        <div style={{color: 'black', margin: '0.3em'}}>
+                            <div>
+                            <NavLink to='/recipe'>Recipe 1</NavLink>
+                            </div>
+                            <div>
+                            <NavLink to='/recipe'>Recipe 2</NavLink>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div className="accordion-item">
-                    <h2 className="accordion-header" id="panelsStayOpen-headingTwo">
-                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
-                            Soups:
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseTwo" className="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo" data-bs-parent="#accordionExample">
-                        <div className="accordion-body">
-                            <div style={{ color: 'black', margin: '0.3em' }}>
-                                <div>
-                                    <NavLink to="/recipe">Recipe1</NavLink>
-                                </div>
-                                <div>
-                                    <NavLink to="/recipe">Recipe2</NavLink>
-                                </div>
+                    </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey='1'>
+                    <Accordion.Header>Soups</Accordion.Header>
+                    <Accordion.Body>
+                        <div style={{color: 'black', margin: '0.3em'}}>
+                            <div>
+                                <NavLink to='/recipe'>Recipe 1</NavLink>
+                            </div>
+                            <div>
+                                <NavLink to='/recipe'>Recipe 2</NavLink>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingThree">
-                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Breads:
-                        </button>
-                    </h2>
-                    <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div className="accordion-body">
-                            <div style={{ color: 'black', margin: '0.3em' }}>
-                                <div>
-                                    <NavLink to="/recipe">Recipe1</NavLink>
-                                </div>
-                                <div>
-                                    <NavLink to="/recipe">Recipe2</NavLink>
-                                </div>
+                    </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey='2'>
+                    <Accordion.Header>Breads</Accordion.Header>
+                    <Accordion.Body>
+                        <div style={{color: 'black', margin: '0.3em'}}>
+                            <div>
+                                <NavLink to='/recipe'>Recipe 1</NavLink>
+                            </div>
+                            <div>
+                                <NavLink to='/recipe'>Recipe 2</NavLink>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingFour">
-                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            Sides:
-                        </button>
-                    </h2>
-                    <div id="collapseFour" className="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                        <div className="accordion-body">
-                            <div style={{ color: 'black', margin: '0.3em' }}>
-                                <div>
-                                    <NavLink to="/recipe">Recipe1</NavLink>
-                                </div>
-                                <div>
-                                    <NavLink to="/recipe">Recipe2</NavLink>
-                                </div>
+                    </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey='3'>
+                    <Accordion.Header>Sides</Accordion.Header>
+                    <Accordion.Body>
+                        <div style={{color: 'black', margin: '0.3em'}}>
+                            <div>
+                                <NavLink to='/recipe'>Recipe 1</NavLink>
+                            </div>
+                            <div>
+                                <NavLink to='/recipe'>Recipe 2</NavLink>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingFive">
-                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            Desserts:
-                        </button>
-                    </h2>
-                    <div id="collapseFive" className="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                        <div className="accordion-body">
-                            <div style={{ color: 'black', margin: '0.3em' }}>
-                                <div>
-                                    <NavLink to="/recipe">Recipe1</NavLink>
-                                </div>
-                                <div>
-                                    <NavLink to="/recipe">Recipe2</NavLink>
-                                </div>
+                    </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey='4'>
+                    <Accordion.Header>Desserts</Accordion.Header>
+                    <Accordion.Body>
+                        <div style={{color: 'black', margin: '0.3em'}}>
+                            <div>
+                                <NavLink to='/recipe'>Recipe 1</NavLink>
+                            </div>
+                            <div>
+                                <NavLink to='/recipe'>Recipe 2</NavLink>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingSix">
-                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                            + Add New Recipe
-                        </button>
-                    </h2>
-                    <div id="Six" className="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
-                        <div className="accordion-body">
-                            <div style={{color:'black', margin: '.3em'}}>
-                               <NavLink to="/add_recipe">Click Here to Add a Recipe!</NavLink>
+                    </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey='5'>
+                    <Accordion.Header>Drinks</Accordion.Header>
+                    <Accordion.Body>
+                        <div style={{color: 'black', margin: '0.3em'}}>
+                            <div>
+                                <NavLink to='/recipe'>Recipe 1</NavLink>
+                            </div>
+                            <div>
+                                <NavLink to='/recipe'>Recipe 2</NavLink>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <NavLink to="/add_recipe">Click Here to Add a Recipe!</NavLink>
-            </div>
+                    </Accordion.Body>
+                </Accordion.Item>
+            </Accordion>
         </div>
     </section>
 </main>
-
   );
 }

@@ -21,7 +21,7 @@ export function List_other_books() {
                     </div>
                 </div>
                 
-                {/* <br> */}
+            
 
                 <div className="card">
                     <svg className="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -35,8 +35,6 @@ export function List_other_books() {
                     </div>
             
                 </div>
-
-                {/* </br> */}
 
                 <div className="card">
                     <svg className="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
