@@ -64,3 +64,18 @@ For this deliverable, I formatted the appearance of my application.
 - [x] **Responsive to Window Resizing**: Flex has been applied, so the app should adjust well.
 - [x] **Application Elements**: Played with color scheme, should have good contrast.
 - [x] **Application Images**: Application has images that have been sized appropriately.
+
+
+
+### React Deliverable
+
+For this deliverable, I used Javascript and React so that the application could be interactive. I also added placeholders for later units.
+
+- [] **Bundled and Transpiled**: I bundled and transpiled my old html code.
+- [] **Components**: 
+    - [] **Login**:
+    - [] **Database**:
+    - [] **WebSocket**:
+    - [] **Application Logic**:
+- [X] **Router**: I created a router for injecting code into main in between header and footer.
+- [] **Hooks**:

@@ -1,26 +1,27 @@
 import React from 'react';
 
-export function Login() {
+import { Unauthenticated } from './unauthenticated'
+import { Authenticated } from './authenticated';
+import { AuthState } from './authState';
+
+
+export function Login( {userName, authState, onAuthChange }) {
   return(
     <main className='container-fluid text-center'>
     <div className='root'>
-        <h2>Welcome to Family Recipe Book!</h2>
-        <form className='login_info' method="get" action="#" actiones="#">
-            <div className="input-group mb-3">
-                <span className="input-group-text">Username: </span>
-                <input className="form-control" type="text" placeholder="Your username here" />
-            </div>
-            <div className="input-group mb-3">
-                <span className="input-group-text">Email:</span>
-                <input className="form-control" type="text" placeholder="@youremail.com" />
-            </div>
-            <div className="input-group mb-3">
-                <span className="input-group-text">Password:</span>
-                <input className="form-control" type="password" placeholder="password" />
-            </div>
-            <button type="submit" className="button1">Log in</button>
-            <button type="submit" className="button2">Create Account</button>
-        </form>
+        {/*  the other code had a header in the following line as well, but I think it will write in the other one.  */}
+       {authState !== AuthState.Unknown && <h1>Welcome to Family Recipe Book!</h1>}
+       {authState === AuthState.Authenticated && (
+            <Authenticated userName={userName} onLogout={() => onAuthChange(userName, AuthState.Unauthenticated)} />
+       )}
+       {authState === AuthState.Unauthenticated && (
+          <Unauthenticated
+            userName={userName}
+            onLogin={(loginUserName) => {
+              onAuthChange(loginUserName, AuthState.Authenticated);
+            }}
+          />
+        )}
     </div>
 </main>
   );
