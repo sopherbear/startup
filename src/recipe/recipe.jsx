@@ -2,31 +2,40 @@ import React from 'react';
 import './recipe.css';
 
 export function Recipe() {
+  const [recipeName, setRecipeName] = React.useState('');
+  const [description, setDescription] = React.useState('');
+  const [ingreds, setIngreds] = React.useState('');
+  const [directions, setDirections] = React.useState('');
+
+  React.useEffect(() => {
+    setRecipeName('Yummy Recipe');
+    setDescription('I have very fond memories of Yummy Recipe as a child.')
+    setIngreds('Peanut Butter, chicken broth, soy sauce. Will separate list later.')
+    setDirections('Mix and serve')
+  })
+
   return(
     <main className='container-fluid text-center'>
         {/*<!--All the following information will come from the add_recipe form.-->*/}
       <div className='root'>
       <section id="intro">
-          <p><b>Placeholder Recipe Name</b></p>
-          <p><i>Placeholder recipe description</i></p>
-        </section>
-        <section id="ingredients">
-          <p>
+          <h2><b>{recipeName}</b></h2>
+          <p className='description'><i>{description}</i></p>
+          <p className='ingredients'>
+            <h4><i>Ingredients:</i></h4>
             <ul>
-              <li>Ingredient1</li>
-              <li>Ingredient2</li>
+              <li>{ingreds}</li>
+              {/* <li>Ingredient2</li>
               <li>Ingredient3</li>
-              <li>Ingredient4</li>
+              <li>Ingredient4</li> */}
             </ul>
           </p>
-        </section>
-        <section id="instructions">
-          <p>
+          <p className='instructions'>
+            <h4><i>Instructions:</i></h4>
             <ol>
-              <li>instruction</li>
-              <li>instruction</li>
-              <li>instruction</li>
-              <li>instruction</li>
+              <li>{directions}</li>
+              {/* <li>Instruction2</li>
+              <li>Instruction3</li> */}
             </ol>
           </p>
         </section>

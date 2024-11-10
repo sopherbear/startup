@@ -1,9 +1,12 @@
-main{
-  padding: 2 em;
-  margin: 2 em;
-  border-style: dotted, whitesmoke;
+
+.description {
+  border-bottom: 2px solid whitesmoke;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 
-#intro, #ingredients{
-  border-bottom: thick, whitesmoke;
+.ingredients {
+  border-bottom: 1px solid whitesmoke;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
 }
