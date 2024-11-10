@@ -61,7 +61,7 @@ export function Add_recipe() {
                         </span>
                     </div>
                     {/* would need to figue out what handleSubmit would mean non-locally. */}
-                    <button type="submit" class="button1" onSubmit={handleSubmit}>Submit</button>
+                    <button type="submit" className="button1" >Submit</button>
                 </div>
             </div> 
         </main>
