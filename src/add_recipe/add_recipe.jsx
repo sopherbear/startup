@@ -8,6 +8,14 @@ export function Add_recipe() {
     const [directions, setDirections] = React.useState('');
     const [category, setCategory] = React.useState('');
 
+    const handleClick = () => {
+        storeName();
+        storeDescription();
+        storeIngreds();
+        storeDirections();
+        storeCategory();
+      };
+
 
    async function storeName() {
         localStorage.setItem('recipeName', recipeName);
@@ -51,7 +59,7 @@ export function Add_recipe() {
                     </div>
                     <div>
                         <span className="input-group-text">Categorize recipe:
-                            <select id="categories" value={category} onChange={(e) => setCategory(e.target.value)} ClassName="color:black; margin: .3em;">
+                            <select id="categories" value={category} onChange={(e) => setCategory(e.target.value)} style={{color:'black'}}>
                                 <option >Mains</option>
                                 <option>Soups</option>
                                 <option>Breads</option>
@@ -61,7 +69,8 @@ export function Add_recipe() {
                         </span>
                     </div>
                     {/* would need to figue out what handleSubmit would mean non-locally. */}
-                    <button type="submit" className="button1" >Submit</button>
+                    <button type="submit" className="button1" 
+                    onClick={() => handleClick() }>Submit</button>
                 </div>
             </div> 
         </main>

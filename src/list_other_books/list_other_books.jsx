@@ -3,6 +3,13 @@ import './list_other_books.css';
 import { NavLink } from 'react-router-dom';
 
 export function List_other_books() {
+  const [bookName, setBookName] = React.useState('');
+
+
+  React.useEffect(() => {
+      setBookName('Marge\'s Recipe Book');
+  })
+
   return (
     <main className='container-fluid text-center'>
       <div className='root'>
@@ -15,9 +22,8 @@ export function List_other_books() {
                     </svg>
             
                     <div className="card-body">
-                      <h5 className="card-title">Book1</h5>
-                      <p className="card-text">Recipebook by User</p>
-                      <NavLink to="/other_book" className="btn btn-primary">Recipebook 1</NavLink>
+                      <h5 className="card-title">{bookName}</h5>
+                      <NavLink to="/other_book" className="btn btn-primary">View {bookName}</NavLink>
                     </div>
                 </div>
                 
@@ -29,8 +35,7 @@ export function List_other_books() {
                       <rect width="100%" height="100%" fill="darkslategray"></rect>
                     </svg>
                     <div className="card-body">
-                      <h5 className="card-title">Book1</h5>
-                      <p className="card-text">Recipebook by User</p>
+                      <h5 className="card-title">Empty Book</h5>
                       <NavLink to="/other_book" className="btn btn-primary">Recipebook 1</NavLink>
                     </div>
             
@@ -42,8 +47,7 @@ export function List_other_books() {
                       <rect width="100%" height="100%" fill="darkslategray"></rect>
                     </svg>
                     <div className="card-body">
-                      <h5 className="card-title">Book1</h5>
-                      <p className="card-text">Recipebook by User</p>
+                      <h5 className="card-title">Empty Book</h5>
                       <NavLink to="/other_book" className="btn btn-primary">Recipebook 1</NavLink>
                     </div>
             
@@ -54,8 +58,7 @@ export function List_other_books() {
                       <rect width="100%" height="100%" fill="darkslategray"></rect>
                     </svg>
                     <div className="card-body">
-                      <h5 className="card-title">Book1</h5>
-                      <p className="card-text">Recipebook by User</p>
+                      <h5 className="card-title">Empty Book</h5>
                       <NavLink to="/other_book" className="btn btn-primary">Recipebook 1</NavLink>
                     </div>
                 </div>

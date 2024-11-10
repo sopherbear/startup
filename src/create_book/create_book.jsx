@@ -1,7 +1,7 @@
 import React from 'react';
 
 export function Create_book() {
-    const [bookName, getBookName] = React.useState('');
+    const [bookName, setBookName] = React.useState('');
 
     async function storeBookName() {
         localStorage.setItem('bookName', bookName);
@@ -18,7 +18,7 @@ export function Create_book() {
                         <span className="input-group-text">Book Name:</span> 
                         <input className="form-control" type="text" value={bookName} onChange={(e) => setBookName(e.target.value)} placeholder="Text here" required/>
                         {/* Need to see how handleSubmit would work */}
-                        <button type="submit" className="button1">Submit</button>
+                        <button type="submit" className="button1" onClick={() => storeBookName()}>Submit</button>
                     </div>
                 </div>
             </div>

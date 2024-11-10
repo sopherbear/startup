@@ -72,10 +72,10 @@ For this deliverable, I formatted the appearance of my application.
 For this deliverable, I used Javascript and React so that the application could be interactive. I also added placeholders for later units.
 
 - [X] **Bundled and Transpiled**: I bundled and transpiled my old html code.
-    - [] **Components**: Created stub components for main and used mocks for login, creating new books, and new recipes
-    - [] **Login**:
-    - [] **Database**:
-    - [] **WebSocket**:
-    - [] **Application Logic**:
+    - [X] **Components**: Created stub components for main and used mocks for login, creating new books, and new recipes
+    - [X] **Login**: I got the login mockup set up.
+    - [X] **Database**: The word information is stored locally. It isn't retrieved locally yet, since I have to reformat the text and am not quite sure how to do that yet.
+    - [X] **WebSocket**: I set placeholders for images that will be from an API. I also set placeholders for recipebooks that will viewed by other users.
+    - [X] **Application Logic**: I stored individual elements of the recipe independent of one another in local storage, but triggered them to be stored all at the same time by the press of one button.
 - [X] **Router**: I created a router for injecting code into main in between header and footer.
-- [] **Hooks**:
+- [X] **Hooks**: I use several built-in hooks such as useState and onClick
