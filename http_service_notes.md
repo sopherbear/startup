@@ -1,5 +1,35 @@
 # HTTP Service Notes
 
+## The Internet
+Basically a system of wires that connects all of the computers around the world. 
+In order for devices to communicate with each other, they have to have an IP address.(Example: BYU 128.187.16.184). However, 
+people generally refer to the symbolic name (the domain name).
+
+To find the IP of a domain:
+```
+dig byu.edu
+```
+Once a device has a target IP address, it will ask for a route to that address.
+
+To trace route:
+```
+//the domain you are trying to get to.
+traceroute byu.edu
+```
+### TCP IP Model
+The top application layer uses stuff like HTTP and SSH for user functionality. The lower transport layer breaks application data into small
+chunks and sends them to the other computers. The internet layer actually forges the connection and keeps it live during communication. The
+bottom link layer handles hardware.
+
+
+## Web Servers
+Computing device that hosts a web service that can accept incoming internet connections and speak HTTP application protocol.
+
+### Ports
+Each service on the device starts up on a different port.
+
+We use a Gateway to get to 
+
 
 ## Express
 Used to implement full-on web services.
