@@ -25,13 +25,11 @@ bottom link layer handles hardware.
 ## Web Servers
 Computing device that hosts a web service that can accept incoming internet connections and speak HTTP application protocol.
 
-### Ports
-Each service on the device starts up on a different port.
 
 We use a Gateway to get to the port of the exact service you want, even if you have several services (and thus ports) open concurrently.
 A gateway listens on port 443.
 
-### Domain Names
+## Domain Names
 [subdomain.]secondary.top:  secondary+top are the root.
 
 startup.familyrecipebook.click.
@@ -40,7 +38,7 @@ Subdomains can resolve to different IP addresses.
 
 We can use terminal command **whois** to get information about who to contact on technical issues
 
-### Web Services
+## Web Services
 All requests between devices use HTTPS to exchange data.
 
 We can make requests from the frontend for external data (like quotes or images) and inject it into the DOM. 
@@ -48,6 +46,76 @@ To make a request, we use **fetch**.
 
 Functionality is provided by the backend of the application. Functions provided by a webservice are called *APIs* or *endpoints*.
 Backend can also use fetch to make requests of other services.(Think database)
+
+
+## URLs
+The URL represents the location of a resource. Can be a page, font, image, a gaming session, or a number of other things.
+
+Anatomy of a URL:
+```
+<scheme>://<domain name>:<port>/<path>?<parameters>#<anchor>
+
+https://byu.edu:443/cs/260/student?filter=accepted#summary
+```
+
+## Ports
+Each service on the device starts up on a different port.
+
+To connect a device to the internet, you need an IP address and a port. Port numbers let us use protocols (such as HTTPS and SSH) and services (like authentication and search).
+
+**Common Ports**:
+
+* 20: File transfer protocol
+* 22: SSH for connecting to remote devices
+* 53: DNS for looking up IP addresses
+* 80: HTTPS for web requests
+* 123: managing time
+* 194: chatting
+* 443:HTTPS secure
+
+The web service Caddy is listening on ports 80 and 443.
+
+WE RUN SIMON ON 3000, SO IT CAN'T RUN STARTUP THERE. USE 4000 FOR STARTUP.
+
+## HTTP
+How the web talks. When a web client (e.g. browser) and web server talk, they exchange HTTP requests and responses. We can use the browser debugger
+or the **curl** command to see the exchange.
+
+Example request:
+```
+GET /hypertext/WWW/Helping.html HTTP/1.1
+Host: info.cern.ch
+Accept: text/html
+```
+
+It has this form:
+```
+<verb> <url path, parameters, anchor> <version>
+[<header key: value>]*
+[
+
+  <body>
+]
+```
+
+### HTTP Verbs
+* GET: get resource/list of resources
+* POST: create a new resource
+* PUT: update a resource
+* DELETE: obvious
+* OPTIONS: get metadata about resource (usually HTTP headers)
+
+
+Refer online for status codes.
+
+
+### HTTP Headers
+Includes things like cookies.
+
+Cookies are created by the server and passed to the user as a header. They are used to track state.(Can be used to remember default language of 
+the user, login credentials, or to track your every move.)
+
+
 
 
 ## Express
