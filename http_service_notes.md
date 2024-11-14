@@ -28,7 +28,26 @@ Computing device that hosts a web service that can accept incoming internet conn
 ### Ports
 Each service on the device starts up on a different port.
 
-We use a Gateway to get to 
+We use a Gateway to get to the port of the exact service you want, even if you have several services (and thus ports) open concurrently.
+A gateway listens on port 443.
+
+### Domain Names
+[subdomain.]secondary.top:  secondary+top are the root.
+
+startup.familyrecipebook.click.
+
+Subdomains can resolve to different IP addresses.
+
+We can use terminal command **whois** to get information about who to contact on technical issues
+
+### Web Services
+All requests between devices use HTTPS to exchange data.
+
+We can make requests from the frontend for external data (like quotes or images) and inject it into the DOM. 
+To make a request, we use **fetch**.
+
+Functionality is provided by the backend of the application. Functions provided by a webservice are called *APIs* or *endpoints*.
+Backend can also use fetch to make requests of other services.(Think database)
 
 
 ## Express
