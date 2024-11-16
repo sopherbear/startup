@@ -188,3 +188,6 @@ app.get('/cookie', (req, res, next) => {
 });
 ```
 
+## Startup service notes:
+FUN FACT: if you don't put in any endpoints, there is nothing to debug so the debugger will just open and close because it is useless.
+So add in endpoints first lol. No need for panic just yet.
