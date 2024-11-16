@@ -14,6 +14,7 @@ export function My_book(props) {
   React.useEffect(() => {
     setImageUrl(`./pictures/pexels-ash-craig-122861-376464.jpg`);
     setBookName('Sophie\'s Recipes');
+    fetch('/api/bookName')
   }, []);
 
   return(

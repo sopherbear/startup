@@ -1,11 +1,18 @@
 import React from 'react';
 
-export function Create_book() {
+export function Create_book(props) {
     const [bookName, setBookName] = React.useState('');
 
     async function storeBookName() {
         localStorage.setItem('bookName', bookName);
+
+        await fetch('/api/bookName', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(bookName)
+        });
     }
+
 
   return (
     <main className='container-fluid text-center'>
