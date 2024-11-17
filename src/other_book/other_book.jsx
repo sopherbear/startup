@@ -11,33 +11,24 @@ export function Other_book() {
 
   //we provide empty dependency list at the end so that it only renders the first time that the component is created
   React.useEffect(() => {
-    setImageUrl(`./pictures/pexels-dana-tentis-118658-262959.jpg`);
+    // setImageUrl(`./pictures/pexels-dana-tentis-118658-262959.jpg`);
     setBookName('Rando\'s Recipes');
+
+    const apiUrl = "https://foodish-api.com/api/";
+
+    fetch(apiUrl)
+        .then((response) => {
+            return response.json();
+        })
+
+        .then((data) =>{
+            const imageUrl = data.image;
+            setImageUrl(imageUrl);
+        })
+        .catch();
   }, []);
   
 
-  React.useEffect(() => {
-    const random = Math.floor(Math.random() * 1000);
-    fetch(`https://picsum.photos/v2/list?page=${random}&limit=1`)
-      .then((response) => response.json())
-      .then((data) => {
-        const containerEl = document.querySelector('#picture');
-  
-        const width = containerEl.offsetWidth;
-        const height = containerEl.offsetHeight;
-        const apiUrl = `https://picsum.photos/id/${data[0].id}/${width}/${height}?grayscale`;
-        setImageUrl(apiUrl);
-      })
-      .catch();
-  
-    fetch('https://quote.cs260.click')
-      .then((response) => response.json())
-      .then((data) => {
-        setQuote(data.quote);
-        setQuoteAuthor(data.author);
-      })
-      .catch();
-  }, []);
 
   return(
     <main className='container-fluid text-center'>
@@ -45,7 +36,7 @@ export function Other_book() {
           <div>
             <h2>My Recipe Book</h2>
             {/*<!--NEED TO ADD A TEXT LABEL FOR THE PICTURE and make sure the picture is the same as on the other pages.-->*/}
-            <img src={imageUrl} alt="Food Image"/>
+            <img id="pic" src={imageUrl} alt="Food Image"/>
             <figcaption>{bookName}</figcaption>
           </div>
         </section>
