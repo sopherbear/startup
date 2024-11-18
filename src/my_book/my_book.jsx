@@ -12,10 +12,17 @@ export function My_book(props) {
 
   //we provide empty dependency list at the end so that it only renders the first time that the component is created
   React.useEffect(() => {
+    console.log("whatever")
     setImageUrl(`./pictures/pexels-ash-craig-122861-376464.jpg`);
-    setBookName('Sophie\'s Recipes');
     fetch('/api/bookName')
+        .then((response) => response.json())
+        .then((bookName) => {
+            console.log(bookName)
+            setBookName(bookName.bookName)
+        })
   }, []);
+
+
 
   return(
     <main className='container-fluid text-center'>

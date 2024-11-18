@@ -4,12 +4,11 @@ export function Create_book(props) {
     const [bookName, setBookName] = React.useState('');
 
     async function storeBookName() {
-        localStorage.setItem('bookName', bookName);
-
+        console.log(bookName)
         await fetch('/api/bookName', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
-            body: JSON.stringify(bookName)
+            body: JSON.stringify({bookName})
         });
     }
 
