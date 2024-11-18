@@ -6,8 +6,8 @@ const app = express();
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
 
 let users = {};
-let recipe = {};
-let bookNames = {};
+// I think this has to be brackets because it will be in json format.
+let bookName = {};
 
 app.use(express.json());
 
@@ -61,26 +61,22 @@ apiRouter.delete('/auth/logout', (req, res) => {
 });
 
 
-//get booknames
-apiRouter.get('/bookNames', (_req, res) => {
-  res.send(bookNames);
+//get bookname
+apiRouter.get('/bookName', (_req, res) => {
+  res.send(bookName);
 });
 
 
 // Submit bookName
 apiRouter.post('/bookName', (req, res) => {
-  bookNames= updateBookNames(req.body, bookNames);
-  res.send(bookNames);
+  bookNames= updateBookNames(req.body, bookName);
+  res.send(bookName);
 });
 
 
-function updateBookNames(newBookName, bookNames) {
-  bookNames.push(newBookName);
-
-  if (bookNames.length > 4) {
-    bookNames.length = 4;
-  }
-  return bookNames;
+function updateBookNames(newBookName, bookName) {
+  bookName = newBookName;
+  return bookName;
 }
 
 

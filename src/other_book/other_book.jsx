@@ -13,17 +13,20 @@ export function Other_book() {
   React.useEffect(() => {
     // setImageUrl(`./pictures/pexels-dana-tentis-118658-262959.jpg`);
     setBookName('Rando\'s Recipes');
-
+    
+    //url for api that I will use
     const apiUrl = "https://foodish-api.com/api/";
 
+    //runs fetch on my api with food pictures.
     fetch(apiUrl)
+        //fetch returns a response, which I can then convert to json
         .then((response) => {
             return response.json();
         })
-
-        .then((data) =>{
-            const imageUrl = data.image;
-            setImageUrl(imageUrl);
+        //since this is a promise, it knows that whatever I returned earlier is what is in the parentheses
+        //since got a url to a picture in json format, I named it pic.
+        .then((pic) =>{
+            setImageUrl(pic.image);
         })
         .catch();
   }, []);
@@ -34,7 +37,7 @@ export function Other_book() {
     <main className='container-fluid text-center'>
       <section className='root'>
           <div>
-            <h2>My Recipe Book</h2>
+            <h2>Other Recipe Book</h2>
             {/*<!--NEED TO ADD A TEXT LABEL FOR THE PICTURE and make sure the picture is the same as on the other pages.-->*/}
             <img id="pic" src={imageUrl} alt="Food Image"/>
             <figcaption>{bookName}</figcaption>
