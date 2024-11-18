@@ -79,3 +79,12 @@ For this deliverable, I used Javascript and React so that the application could 
     - [X] **Application Logic**: I stored individual elements of the recipe independent of one another in local storage, but triggered them to be stored all at the same time by the press of one button.
 - [X] **Router**: I created a router for injecting code into main in between header and footer.
 - [X] **Hooks**: I use several built-in hooks such as useState and onClick
+
+
+### Service Deliverable
+
+- [X] **Node.js/Express HTTP service**: I implemented Node.js and Express tools
+- [X] **Static Middleware for Frontend**: I set it up so the image for "my recipe book" will always be the same one from the public file.
+- [X] **Calls to Third-Party Sevice Endpoints**: The food images for "other books" are taken from third-party api.
+- [] **Backend Service Endpoints**: Placeholders for login. Endpoints for my_recipe_book name.
+- [X] **Frontend Calls Service Endpoints**: Frontend uses fetch to access endpoints like recipebook names.

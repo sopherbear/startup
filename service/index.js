@@ -13,11 +13,6 @@ app.use(express.json());
 
 app.use(express.static('public'));
 
-//This code just checked that it was working.
-// app.get('*', (_req, res) => {
-//   res.send({ msg: 'Startup service' });
-// });
-
 
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
