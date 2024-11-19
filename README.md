@@ -86,5 +86,5 @@ For this deliverable, I used Javascript and React so that the application could 
 - [X] **Node.js/Express HTTP service**: I implemented Node.js and Express tools
 - [X] **Static Middleware for Frontend**: I set it up so the image for "my recipe book" will always be the same one from the public file.
 - [X] **Calls to Third-Party Sevice Endpoints**: The food images for "other books" are taken from third-party api.
-- [] **Backend Service Endpoints**: Placeholders for login. Endpoints for my_recipe_book name.
-- [X] **Frontend Calls Service Endpoints**: Frontend uses fetch to access endpoints like recipebook names.
+- [X] **Backend Service Endpoints**: Placeholders for login. Endpoints for my_recipe_book name. Still some errors with endpoint for otherbooks, though.
+- [X] **Frontend Calls Service Endpoints**: Frontend uses fetch to access endpoints like recipebook

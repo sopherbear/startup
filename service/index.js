@@ -8,6 +8,7 @@ const port = process.argv.length > 2 ? process.argv[2] : 4000;
 let users = {};
 // I think this has to be brackets because it will be in json format.
 let bookName = {bookName: ""};
+let otherBookNames = [{otherBookName: "Lizzie's Book"}, {otherBookName: "Elinor's Book"}, {otherBookName: "Anne's Book"}, {otherBookName: "Marianne's Book"}];
 
 app.use(express.json());
 
@@ -75,6 +76,36 @@ function updateBookName(newBookName, bookName) {
   bookName.bookName = newBookName;
   return bookName;
 }
+
+apiRouter.delete('/auth/logout', (req, res) => {
+  const user = Object.values(users).find((u) => u.token === req.body.token);
+  if (user) {
+    delete user.token;
+  }
+  res.status(204).end();
+});
+
+
+apiRouter.get('/otherBookNames', (_req, res) => {
+  res.send(otherBookNames);
+});
+
+apiRouter.post('/otherBookName', (req, res) => {
+  scores = updateOtherBookNames(req.body, otherBookNames);
+  res.send(otherBookNames);
+});
+
+
+//For right now, this is a placeholder.
+// function updateScores(newScore, scores) {
+//   let found = false;
+//   for (const [i, prevScore] of scores.entries()) {
+//     if (newScore.score > prevScore.score) {
+//       scores.splice(i, 0, newScore);
+//       found = true;
+//       break;
+//     }
+//   }
 
 
 

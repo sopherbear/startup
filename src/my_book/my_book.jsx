@@ -17,7 +17,6 @@ export function My_book(props) {
     fetch('/api/bookName')
         .then((response) => response.json())
         .then((bookName) => {
-            console.log(bookName)
             setBookName(bookName.bookName)
         })
   }, []);
