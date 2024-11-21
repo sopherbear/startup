@@ -42,3 +42,36 @@ db.house.find({ $or: [(beds: { $lt: 3 }), (price: { $lt: 1000 })] });
 // find houses with the text 'modern' or 'beach' in the summary
 db.house.find({ summary: /(modern|beach)/i });
 ```
+
+When setting up mongo for my application, it needs to be in the service folder for the backend. *INSTALL MONGO.DB WITHIN THERE, TOO.*
+
+make sure to keep username, hostname, and password in a file and put it in .gitignore. Import the info from the file in different areas to actually use the info.
+
+## Account Creation and Login
+In order to authenticate users, we need two endpoints: one to create a user and another to allow the user to login with their credentials.
+We want to alter access to other endpoints (and pages) until authenticated.
+
+If the email already exists in our database, we want to return a 409(conflict) status. It should return a cookie containing an authentication token and a user ID.
+
+### GetMe Endpoint
+Uses the authentication token from the cookie to look up and return info about an authenticated user. (So, to log in rather than to create an account).
+
+## Login Webservice using Express
+Create/Login using Express:
+```
+const express = require('express');
+const app = express();
+
+app.post('/auth/create', async (req, res) => {
+  res.send({ id: 'user@id.com' });
+});
+
+app.post('/auth/login', async (req, res) => {
+  res.send({ id: 'user@id.com' });
+});
+
+const port = 8080;
+app.listen(port, function () {
+  console.log(`Listening on port ${port}`);
+});
+```
