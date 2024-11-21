@@ -24,6 +24,7 @@ export function List_other_books() {
                 <div className="card" key={index}>
                   {/* aria-label makes it possible for each  */}
                     <svg className="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+                      {/* book is the particular item at the index in otherBookNames, and I call the otherBookName attribute to be the label */}
                       <title>{book.otherBookName}</title>
                       <rect width="100%" height="100%" fill="darkslategray"></rect>
                     </svg>
