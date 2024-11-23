@@ -36,7 +36,6 @@ export function Unauthenticated(props) {
   return (
     <>
       <div className='root'>
-        <h2>Welcome to Family Recipe Book!</h2>
         <div className='login_info'>
           <div className='input-group mb-3'>
             <span className='input-group-text'>Email:</span>

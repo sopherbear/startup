@@ -25,7 +25,8 @@ function App() {
               <div className="navbar-brand">Family Recipe Book</div>
               <menu className="navbar-nav">
                 <li className="nav-item">
-                    <NavLink className="nav-link" to='login'>Home</NavLink>
+                    {/* Initially had "login" in the "to" */}
+                    <NavLink className="nav-link" to=''>Home</NavLink>
                 </li>
                 {authState === AuthState.Authenticated && (
                 <li className='nav-item'>
