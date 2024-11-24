@@ -88,3 +88,14 @@ For this deliverable, I used Javascript and React so that the application could 
 - [X] **Calls to Third-Party Sevice Endpoints**: The food images for "other books" are taken from third-party api.
 - [X] **Backend Service Endpoints**: Placeholders for login. Endpoints for my_recipe_book name. Still some errors with endpoint for otherbooks, though.
 - [X] **Frontend Calls Service Endpoints**: Frontend uses fetch to access endpoints like recipebook
+
+
+### DB/Login Deliverable
+For this deliverable, I set up the login and stored book names in mongodb.
+
+-[X] **MongoDB Atlas database created**: I successfully created the database.
+-[X] **Stores Data in MongoDB**: The database stores authentication information and book names.
+-[X] **User Registration**: User can create an account now.
+-[X] **Existing User**: An existing user can log in.
+-[X] **Uses MongoDB to Store Credentials**: Users are stored, as well as recipe book names that they submit.
+-[X] **Restricts Functionality**: Unless the user is logged in, they cannot access the recipe books.
