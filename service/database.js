@@ -1,5 +1,5 @@
 const { MongoClient } = require('mongodb');
-const bcyrpt = require('bcrypt');
+const bcrypt = require('bcrypt');
 const uuid = require('uuid');
 const config = require('./dbConfig.json');
 
@@ -47,9 +47,21 @@ async function createUser(email, password) {
 
 
 //REMEMBER TO COMPLETE THE FUNCTION LATER
-async function createBookName() {
-  return;
+async function createBookName(token) {
+  const bookName = {
+    token: token,
+
+  }
+  await bookNameCollection.insertOne(bookName);
+  
+  return bookName;
 }
+
+//I think I can use this to get book name for the user's specific book.
+async function getBookName(token) {
+  return bookNameCollection.findOne({ token: token });
+}
+
 
 
 module.exports = {

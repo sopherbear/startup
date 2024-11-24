@@ -88,6 +88,33 @@ secureApiRouter.use(async (req, res, next) => {
 });
 
 //ADD IN CODE FOR GETTING RECIPE BOOK NAMES AND RECIPES
+//use secureApiRouter for these ones
+
+//gets bookNames when requested
+secureApiRouter.get('/bookNames', async (req, res) => {
+  const bookNames = await DB.getBookNames();
+  res.send(bookNames);
+});
+
+// Adds a bookName to the database
+secureApiRouter.post('/bookName', async (req, res) => {
+  const bookName = { ...req.body, ip: req.ip };
+  await DB.addBookName(bookName);
+  const bookNames = await DB.getBookNames();
+  res.send(bookNames);
+});
+
+secureApiRouter.get('/recipes', async (req, res) => {
+  const recipes = await DB.getRecipes();
+  res.send(recipes);
+});
+
+secureApiRouter.post('/recipe', async (req, res) => {
+  const recipe = { ...req.body, ip: req.ip };
+  await DB.addRecipe(recipe);
+  const recipes = await DB.getRecipes();
+  res.send(recipes);
+});
 
 
 // Default error handler
@@ -109,6 +136,7 @@ function setAuthCookie(res, authToken) {
   });
 }
 
+//Where should this be getting called? is this the issue?
 const httpService = app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });

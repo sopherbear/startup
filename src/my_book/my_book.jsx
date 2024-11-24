@@ -12,7 +12,6 @@ export function My_book(props) {
 
   //we provide empty dependency list at the end so that it only renders the first time that the component is created
   React.useEffect(() => {
-    console.log("whatever")
     setImageUrl(`./pictures/pexels-ash-craig-122861-376464.jpg`);
     fetch('/api/bookName')
         .then((response) => response.json())

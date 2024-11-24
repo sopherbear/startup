@@ -7,7 +7,8 @@ export function Create_book(props) {
         console.log(bookName)
         await fetch('/api/bookName', {
             method: 'POST',
-            headers: { 'content-type': 'application/json' },
+            headers: { 'content-type': 'application/json',
+             },
             body: JSON.stringify({bookName})
         });
     }
