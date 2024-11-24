@@ -47,14 +47,22 @@ async function createUser(email, password) {
 
 
 //REMEMBER TO COMPLETE THE FUNCTION LATER
-async function createBookName(token) {
-  const bookName = {
-    token: token,
+async function addBookName(bookName) {
+  return bookNameCollection.insertOne(bookName);
+}
 
+async function getBookNames() {
+  const query  = {}
+  const options = {
+    limit: 4,
   }
-  await bookNameCollection.insertOne(bookName);
-  
-  return bookName;
+  const cursor = bookNameCollection.find(query, options);
+  return cursor.toArray();
+}
+
+async function getMyBookName(token) {
+  const query = { token: token}
+  return cursor = bookNameCollection.findOne(query);
 }
 
 //I think I can use this to get book name for the user's specific book.

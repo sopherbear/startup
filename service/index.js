@@ -109,6 +109,12 @@ secureApiRouter.get('/recipes', async (req, res) => {
   res.send(recipes);
 });
 
+secureApiRouter.get('/bookName', async (req, res) => {
+  const recipe = await DB.getMyBookName();
+  res.send(recipe);
+})
+
+
 secureApiRouter.post('/recipe', async (req, res) => {
   const recipe = { ...req.body, ip: req.ip };
   await DB.addRecipe(recipe);
