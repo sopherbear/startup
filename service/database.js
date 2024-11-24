@@ -52,11 +52,8 @@ async function addBookName(bookName) {
 }
 
 async function getBookNames() {
-  const query  = {}
-  const options = {
-    limit: 4,
-  }
-  const cursor = bookNameCollection.find(query, options);
+  const query  = {}; 
+  const cursor = bookNameCollection.find(query);
   return cursor.toArray();
 }
 
@@ -65,10 +62,8 @@ async function getMyBookName(token) {
   return cursor = bookNameCollection.findOne(query);
 }
 
-//I think I can use this to get book name for the user's specific book.
-async function getBookName(token) {
-  return bookNameCollection.findOne({ token: token });
-}
+//Will need to add recipes later
+
 
 
 
@@ -76,6 +71,8 @@ module.exports = {
   getUser,
   getUserByToken,
   createUser,
-  createBookName,
+  addBookName,
+  getBookNames,
+  getMyBookName
 
 };

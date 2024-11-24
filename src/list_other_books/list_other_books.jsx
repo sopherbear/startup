@@ -8,7 +8,7 @@ export function List_other_books() {
 
 
   React.useEffect(() => {
-      fetch('/api/otherBookNames')
+      fetch('/api/bookNames')
         .then((response) => response.json())
         .then((data) => setOtherBookNames(data))
   }, []);

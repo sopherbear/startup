@@ -110,7 +110,7 @@ secureApiRouter.get('/recipes', async (req, res) => {
 });
 
 secureApiRouter.get('/bookName', async (req, res) => {
-  const recipe = await DB.getMyBookName();
+  const recipe = await DB.getMyBookName(user.token);
   res.send(recipe);
 })
 

@@ -11,6 +11,7 @@ export function Create_book(props) {
              },
             body: JSON.stringify({bookName})
         });
+        console.log("kachow");
     }
 
 
