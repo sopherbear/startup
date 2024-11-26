@@ -94,8 +94,9 @@ For this deliverable, I used Javascript and React so that the application could 
 For this deliverable, I set up the login and stored book names in mongodb.
 
 -[X] **MongoDB Atlas database created**: I successfully created the database.
--[X] **Stores Data in MongoDB**: The database stores authentication information and book names.
+-[X] **Stores Data in MongoDB**: The database stores authentication information and book names and retrieves book names.
 -[X] **User Registration**: User can create an account now.
--[X] **Existing User**: An existing user can log in.
+-[X] **Existing User**: An existing user can log in and access their recipebookname.
 -[X] **Uses MongoDB to Store Credentials**: Users are stored, as well as recipe book names that they submit.
--[X] **Restricts Functionality**: Unless the user is logged in, they cannot access the recipe books.
+-[X] **Restricts Functionality**: Unless the user is logged in, they cannot access the recipe books. MyRecipeBook doesn't pull up
+names of other user's books.
