@@ -5,7 +5,7 @@ const config = require('./dbConfig.json');
 
 const url = `mongodb+srv://${config.userName}:${config.password}@${config.hostname}`;
 //client is going to be in my mongo database tied to the info I have in dbConfig.
-const client = new MongoClient(url);
+const client = new MongoClient(url, {tls: true, serverSelectionTimeoutMS: 4000, autoSelectFamily: false,});
 //specifies the data that belongs to startup
 const db = client.db('startup')
 //specifies collections of data to startup
