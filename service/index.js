@@ -98,7 +98,8 @@ secureApiRouter.get('/bookNames', async (req, res) => {
 
 // Adds a bookName to the database
 secureApiRouter.post('/bookName', async (req, res) => {
-  const bookName = { ...req.body, ip: req.ip };
+  const authToken = req.cookies[authCookieName];
+  const bookName = { ...req.body, ip: req.ip, token: authToken};
   await DB.addBookName(bookName);
   const bookNames = await DB.getBookNames();
   res.send(bookNames);
@@ -110,8 +111,9 @@ secureApiRouter.get('/recipes', async (req, res) => {
 });
 
 secureApiRouter.get('/bookName', async (req, res) => {
-  const recipe = await DB.getMyBookName(user.token);
-  res.send(recipe);
+  const authToken = req.cookies[authCookieName];
+  const name = await DB.getMyBookName(authToken);
+  res.send(name);
 })
 
 
