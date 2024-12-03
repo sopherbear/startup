@@ -95,3 +95,6 @@ Javascript is used for all the interactive features on a web application.
 
 ## Data and Authentication Services
 [data_authentication_notes](./data_authentication_notes.md)
+
+## WebSocket
+[webSocket_notes](./webSocket_notes.md)
