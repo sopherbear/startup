@@ -104,11 +104,7 @@ secureApiRouter.post('/bookName', async (req, res) => {
   res.send(bookNames);
 });
 
-secureApiRouter.get('/recipes', async (req, res) => {
-  const recipes = await DB.getRecipes();
-  res.send(recipes);
-});
-
+//get a particular bookName
 secureApiRouter.get('/bookName', async (req, res) => {
   const authToken = req.cookies[authCookieName];
   const name = await DB.getMyBookName(authToken);
@@ -116,12 +112,23 @@ secureApiRouter.get('/bookName', async (req, res) => {
 })
 
 
-secureApiRouter.post('/recipe', async (req, res) => {
-  const recipe = { ...req.body, ip: req.ip };
-  await DB.addRecipe(recipe);
-  const recipes = await DB.getRecipes();
+// RECIPES HERE
+//
+secureApiRouter.get('/recipes', async (req, res)=> {
+  const recipes = await DB.getSomeRecipes();
   res.send(recipes);
 });
+
+//add a recipe to the database
+secureApiRouter.post('/recipes', async (req, res) => {
+  const authToken = req.cookies[authCookieName]
+  const recipe = { ...req.body, ip: req.ip, token: authToken,};
+  await DB.addRecipe(recipe);
+  const recipes = await DB.getSomeRecipes();
+  res.send(recipes);
+});
+
+//
 
 
 // Default error handler

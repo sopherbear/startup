@@ -8,34 +8,22 @@ export function Add_recipe() {
     const [directions, setDirections] = React.useState('');
     const [category, setCategory] = React.useState('');
 
-    const handleClick = () => {
-        storeName();
-        storeDescription();
-        storeIngreds();
-        storeDirections();
-        storeCategory();
-      };
-
-
-   async function storeName() {
-        localStorage.setItem('recipeName', recipeName);
-   }
-
-   async function storeDescription() {
-        localStorage.setItem('description', description);
-   }
-
-   async function storeIngreds() {
-        localStorage.setItem('ingreds', ingreds);
-   }
-
-   async function storeDirections() {
-        localStorage.setItem('directions', directions)
-   }
-
-   async function storeCategory() {
-        localStorage.setItem('category', category);
-   }
+    async function storeRecipe() {
+        console.log("storeRecipe was called")
+        await fetch('/api/recipe', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json',
+            },
+            body: JSON.stringify({
+                name: recipeName,
+                description: description,
+                ingredients: ingreds,
+                directions: directions,
+                category: category
+            })
+        });
+        console.log("ran through storeRecipe")
+    }
 
 
   return(
@@ -70,7 +58,7 @@ export function Add_recipe() {
                     </div>
                     {/* would need to figue out what handleSubmit would mean non-locally. */}
                     <button type="submit" className="button1" 
-                    onClick={() => handleClick() }>Submit</button>
+                    onClick={() => storeRecipe()}>Submit</button>
                 </div>
             </div> 
         </main>

@@ -70,15 +70,22 @@ async function addRecipe(recipe) {
   return recipeCollection.insertOne(recipe);
 }
 
-async function getRecipes() {
+async function getSomeRecipes() {
   //WILL NEED TO MAKE SURE CATEGORIES MATCH SO THIS WORKS
   const query = {
     token: token,
     category: category
   }
+  
   //want a list so that I can put a link to every recipe that falls into the category that falls under the category
   const cursor = recipeCollection.find(query);
   return cursor.toArray();
+}
+
+async function getAllRecipes() {
+  const query = {}
+  const cursor = recipeCollection.find(query);
+  return cursor.toArray;
 }
 
 
@@ -90,6 +97,6 @@ module.exports = {
   getBookNames,
   getMyBookName,
   addRecipe,
-  getRecipes
-
+  getSomeRecipes,
+  getAllRecipes
 };
