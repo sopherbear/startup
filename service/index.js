@@ -87,7 +87,6 @@ secureApiRouter.use(async (req, res, next) => {
   }
 });
 
-//ADD IN CODE FOR GETTING RECIPE BOOK NAMES AND RECIPES
 //use secureApiRouter for these ones
 
 //gets bookNames when requested

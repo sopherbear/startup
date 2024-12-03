@@ -8,6 +8,8 @@ const url = `mongodb+srv://${config.userName}:${config.password}@${config.hostna
 const client = new MongoClient(url, {tls: true, serverSelectionTimeoutMS: 4000, autoSelectFamily: false,});
 //specifies the data that belongs to startup
 const db = client.db('startup')
+
+//MONGODB BABYYYY
 //specifies collections of data to startup
 const userCollection = db.collection('user');
 const bookNameCollection = db.collection('bookName');
@@ -64,7 +66,20 @@ async function getMyBookName(token) {
 
 //Will need to add recipes later
 
+async function addRecipe(recipe) {
+  return recipeCollection.insertOne(recipe);
+}
 
+async function getRecipes() {
+  //WILL NEED TO MAKE SURE CATEGORIES MATCH SO THIS WORKS
+  const query = {
+    token: token,
+    category: category
+  }
+  //want a list so that I can put a link to every recipe that falls into the category that falls under the category
+  const cursor = recipeCollection.find(query);
+  return cursor.toArray();
+}
 
 
 module.exports = {
@@ -73,6 +88,8 @@ module.exports = {
   createUser,
   addBookName,
   getBookNames,
-  getMyBookName
+  getMyBookName,
+  addRecipe,
+  getRecipes
 
 };
