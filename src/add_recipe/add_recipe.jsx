@@ -46,15 +46,8 @@ export function Add_recipe() {
                         <textarea className="form-control" type="textarea" value={directions} onChange={(e) => setDirections(e.target.value)} placeholder="E.g.: 1. Set oven to 350F. 2. Get..." required></textarea>
                     </div>
                     <div>
-                        <span className="input-group-text">Categorize recipe:
-                            <select id="categories" value={category} onChange={(e) => setCategory(e.target.value)} style={{color:'black'}}>
-                                <option >Mains</option>
-                                <option>Soups</option>
-                                <option>Breads</option>
-                                <option>Sides</option>
-                                <option>Desserts</option>
-                            </select>
-                        </span>
+                        <span className="input-group-text">Categorize as one of the following: mains, soups, breads, sides, desserts</span>
+                        <textarea className="form-control" type="textarea" value={category} onChange={(e) => setCategory(e.target.value)} placeholder="E.g. mains" required></textarea>
                     </div>
                     {/* would need to figue out what handleSubmit would mean non-locally. */}
                     <button type="submit" className="button1" 
