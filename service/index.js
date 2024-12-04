@@ -120,7 +120,7 @@ secureApiRouter.get('/recipes', async (req, res)=> {
 });
 
 //add a recipe to the database
-secureApiRouter.post('/recipes', async (req, res) => {
+secureApiRouter.post('/recipe', async (req, res) => {
   const authToken = req.cookies[authCookieName]
   const recipe = { ...req.body, ip: req.ip, token: authToken,};
   await DB.addRecipe(recipe);
