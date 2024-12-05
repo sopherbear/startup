@@ -9,7 +9,7 @@ export function My_book(props) {
   //initializes the bookName and function we will use to get bookName
   const [bookName, setBookName] = React.useState('Loading...');
   //initializes recipe and the function to get recipe.
-  const [recipes, setRecipes] = React.useState([])
+  const [recipes, setRecipes] = React.useState(null)
 
 
   //we provide empty dependency list at the end so that it only renders the first time that the component is created
@@ -23,13 +23,13 @@ export function My_book(props) {
         })
   }, []);
 
-  React.useEffect(() => {
-    console.log("getting Recipes")
-    fetch('/api/recipes')
-    .then((response) => response.json())
-    .then((data) => setRecipes)
-    console.log(recipes)
-  }, []);
+//   React.useEffect(() => {
+//     console.log("getting Recipes")
+//     fetch('/api/recipes')
+//     .then((response) => response.json())
+//     .then((data) => setRecipes(data))
+//     console.log(recipes)
+//   }, []);
 
 
 
