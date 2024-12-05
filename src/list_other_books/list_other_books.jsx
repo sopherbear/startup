@@ -34,44 +34,7 @@ export function List_other_books() {
                       <NavLink to="/other_book" className="btn btn-primary">View {book.otherBookName}</NavLink>
                     </div>
                 </div>
-                
-                // <div className="card" key={index}>
-                //     <svg className="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-                //       <title>Book1</title>
-                //       <rect width="100%" height="100%" fill="darkslategray"></rect>
-                //     </svg>
-                //     <div className="card-body">
-                //       <h5 className="card-title">{otherBookName[1].otherBookName}</h5>
-                //       <NavLink to="/other_book" className="btn btn-primary">{otherBookNames[1].otherBookName}</NavLink>
-                //     </div>
-            
-                // </div>
-                
-
-                 
-                // <div className="card">
-                //     <svg className="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-                //       <title>Book1</title>
-                //       <rect width="100%" height="100%" fill="darkslategray"></rect>
-                //     </svg>
-                //     <div className="card-body">
-                //       <h5 className="card-title">{otherBookNames[2].otherBookName}</h5>
-                //       <NavLink to="/other_book" className="btn btn-primary">{otherBookNames[2].otherBookName}</NavLink>
-                //     </div>
-                // </div>
-                
-
-                
-                // <div className="card">
-                //     <svg className="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-                //       <title>Book1</title>
-                //       <rect width="100%" height="100%" fill="darkslategray"></rect>
-                //     </svg>
-                //     <div className="card-body">
-                //       <h5 className="card-title">{otherBookNames[3].otherBookName}</h5>
-                //       <NavLink to="/other_book" className="btn btn-primary">{otherBookNames[3].otherBookName}</NavLink>
-                //     </div>
-                // </div>
+      
                   ))): (
                   <p>loading . . .</p>
                 )}

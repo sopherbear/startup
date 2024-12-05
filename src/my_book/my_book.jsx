@@ -6,8 +6,10 @@ import { Accordion } from 'react-bootstrap';
 export function My_book(props) {
     //The following block lets us get urls for the random images we will eventually use.
   const [imageUrl, setImageUrl] = React.useState('');
-  //the following line initializes a state variable called quote, which will be updated by a function called setQuote, which is called later on.
+  //initializes the bookName and function we will use to get bookName
   const [bookName, setBookName] = React.useState('Loading...');
+  //initializes recipe and the function to get recipe.
+  const [recipes, setRecipes] = React.useState([])
 
 
   //we provide empty dependency list at the end so that it only renders the first time that the component is created
@@ -20,6 +22,16 @@ export function My_book(props) {
             setBookName(bookName.bookName)
         })
   }, []);
+
+  React.useEffect(() => {
+    console.log("getting Recipes")
+    fetch('/api/recipes')
+    .then((response) => response.json())
+    .then((data) => setRecipes)
+    console.log(recipes)
+  }, []);
+
+
 
 
 

@@ -113,7 +113,12 @@ secureApiRouter.get('/bookName', async (req, res) => {
 
 
 // RECIPES HERE
-//
+//*********NOT SURE IF THIS IS GOING TO WORK, BUT WE CAN TRY IT I GUESS. */
+secureApiRouter.get('/recipes', async (req, res)=> {
+  const recipes = await DB.getAllRecipes();
+  res.send(recipes);
+});
+
 secureApiRouter.get('/recipes', async (req, res)=> {
   const recipes = await DB.getSomeRecipes();
   res.send(recipes);
