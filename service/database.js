@@ -73,8 +73,7 @@ async function addRecipe(recipe) {
 async function getSomeRecipes() {
   //WILL NEED TO MAKE SURE CATEGORIES MATCH SO THIS WORKS
   const query = {
-    token: token,
-    category: category
+    token: token
   }
   
   //want a list so that I can put a link to every recipe that falls into the category that falls under the category

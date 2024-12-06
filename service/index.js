@@ -119,7 +119,7 @@ secureApiRouter.get('/recipes', async (req, res)=> {
   res.send(recipes);
 });
 
-secureApiRouter.get('/recipes', async (req, res)=> {
+secureApiRouter.get('/someRecipes', async (req, res)=> {
   const recipes = await DB.getSomeRecipes();
   res.send(recipes);
 });

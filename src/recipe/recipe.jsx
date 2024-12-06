@@ -2,10 +2,8 @@ import React from 'react';
 import './recipe.css';
 
 export function Recipe() {
-  const [recipeName, setRecipeName] = React.useState('');
-  const [description, setDescription] = React.useState('');
-  const [ingreds, setIngreds] = React.useState('');
-  const [directions, setDirections] = React.useState('');
+  const [recipe, setRecipe] = React.useState('');
+  
 
   React.useEffect(() => {
     setRecipeName('Yummy Recipe');
