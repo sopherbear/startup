@@ -70,7 +70,7 @@ async function addRecipe(recipe) {
   return recipeCollection.insertOne(recipe);
 }
 
-async function getSomeRecipes() {
+async function getSomeRecipes(token) {
   //WILL NEED TO MAKE SURE CATEGORIES MATCH SO THIS WORKS
   const query = {
     token: token

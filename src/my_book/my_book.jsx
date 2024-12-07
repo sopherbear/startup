@@ -15,22 +15,24 @@ export function My_book(props) {
   //we provide empty dependency list at the end so that it only renders the first time that the component is created
   React.useEffect(() => {
     setImageUrl(`./pictures/pexels-ash-craig-122861-376464.jpg`);
+    console.log("hello")
     fetch('/api/bookName', {
         method: 'GET'})
         .then((response) => response.json())
         .then((bookName) => {
             setBookName(bookName.bookName)
+            console.log(bookName)
         })
   }, []);
 
-//   React.useEffect(() => {
-//     console.log("getting Recipes")
-//     fetch('/api/someRecipes', {
-//         method: 'GET'})
-//     .then((response) => response.json())
-//     .then((data) => setRecipes(data))
-//     console.log(recipes)
-//   }, []);
+  React.useEffect(() => {
+    console.log("getting Recipes")
+    fetch('/api/someRecipes', {
+        method: 'GET'})
+    .then((response) => response.json())
+    .then((data) => setRecipes(data))
+    console.log(recipes)
+  }, []);
 
 
   return(
