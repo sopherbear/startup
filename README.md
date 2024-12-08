@@ -100,3 +100,11 @@ For this deliverable, I set up the login and stored book names in mongodb.
 -[X] **Uses MongoDB to Store Credentials**: Users are stored, as well as recipe book names that they submit.
 -[X] **Restricts Functionality**: Unless the user is logged in, they cannot access the recipe books. MyRecipeBook doesn't pull up
 names of other user's books.
+
+### WebSocket Deliverable
+For this deliverable, I worked on getting webSocket set up.
+-[X] **Backend listens for websocket connection**: I set up websocket on back end in peerProxy.
+-[X] **Frontend makes WebSocket connection**: I set up frontend to connect to websocket.
+-[ ] **Data sent over WebSocket connection**: I ran into some issues here and didn't have time to figure them out.
+-[ ] **WebSocket data displayed**: Didn't end up getting this working.
+-[ ] **Application fully functional**: I didn't end up getting everything in the app working, and at this point I have to work on other assignments. I feel bad about that, but I intend to come back to this project and try to figure it out after finals to prove to myself I can do it.
