@@ -1,6 +1,6 @@
 let num_users = 0;
 
-const appEvent = {
+const numEvent = {
   count: num_users,
 };
 
@@ -13,7 +13,7 @@ class EventMessage {
   }
 }
 
-class appNotifier {
+class numNotifier {
   events = [];
   handlers = [];
 
@@ -22,11 +22,11 @@ class appNotifier {
     const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
     this.socket = new WebSocket(`${protocol}://${window.location.hostname}:${port}/ws`);
     this.socket.onopen = (event) => {
-      this.receiveEvent(new EventMessage('startup', GameEvent.count, { msg: 'connected' }));
+      this.receiveEvent(new EventMessage('startup', numEvent.count, { msg: 'connected' }));
       num_users++;
     };
     this.socket.onclose = (event) => {
-      this.receiveEvent(new EventMessage('startup', GameEvent.count, { msg: 'disconnected' }));
+      this.receiveEvent(new EventMessage('startup', numEvent.count, { msg: 'disconnected' }));
       num_users--;
     };
     this.socket.onmessage = async (msg) => {
@@ -61,5 +61,5 @@ class appNotifier {
   }
 }
 
-const appNotifier = new appNotifier();
-export { appEvent, appNotifier };
+const numNotifier = new numNotifier();
+export { numEvent, numNotifier };

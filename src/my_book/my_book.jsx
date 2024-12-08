@@ -2,7 +2,6 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './my_book.css'
 import { Accordion } from 'react-bootstrap';
-import { appEvent, appNotifier } from './appNotifier';
 
 export function My_book(props) {
     //The following block lets us get urls for the random images we will eventually use.
